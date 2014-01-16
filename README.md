@@ -1,4 +1,4 @@
 E11_PHP
 =======
 
-Prjet Pumir en PHP
+Projet Pumir en PHP
