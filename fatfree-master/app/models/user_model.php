@@ -5,10 +5,10 @@ class user_model extends model{
         parent::__construct();
      }
   
-  function inscription($params){
-    $nom = $this->getMapper('test')->find('nom="'.$params['nom'].'" ');
-    $this->getMapper('test')->copyFrom('POST');
-    return $this->getMapper('test')->save();
+  function inscription($f3,$params){
+    $nom = $this->getMapper('test');
+    $nom->nom=$params['nom'];
+    return $nom->save();
   }
 
   // function inscription($f3, $params){

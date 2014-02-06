@@ -54,7 +54,8 @@ class user_controller extends controller{
   //   }
 
     function inscription($f3){
-      $f3->set('nom',$this->model->inscription(array('nom'=>$f3->get('PARAMS.nom'))));
+      $model=new user_model();
+      $f3->set('nom',$model->inscription($f3,array('nom'=>$f3->get('POST.nom'))));
       echo View::instance()->render('main.html');
     }
 }
