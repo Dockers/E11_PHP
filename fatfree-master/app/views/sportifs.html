@@ -1,0 +1,11 @@
+<h1>Sportifs trouvés : </h1>
+<?php 
+if(isset($sportifs)):
+foreach($sportifs as $sportif): 
+?>
+<li><?php echo $sportif->prenom." - ".$sportif->nom; ?>
+</li>
+<?php 
+endforeach; 
+endif;
+?>

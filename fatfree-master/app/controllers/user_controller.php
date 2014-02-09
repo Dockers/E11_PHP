@@ -7,52 +7,12 @@ class user_controller extends controller{
   }
   
   function home(){
-    echo View::instance()->render('inscription.html');
+    echo View::instance()->render('index.html');
   }
-  
-/*--------------------------------------
-------- INSCRIPTION / CONNEXION --------
---------------------------------------*/
-
-  // Inscription
-  // function inscription($f3){
-  //     $userPost= array();
-  //     if( ($f3->exists('POST.firstname')) || ($f3->exists('POST.lastname')) || ($f3->exists('POST.email')) ||($f3->exists('POST.password')) || ($f3->exists('POST.passwordConfirm')) || ($f3->exists('POST.sexe')) || ($f3->exists('POST.birthday')) || ($f3->exists('POST.level')) || ($f3->exists('POST.available')) || ($f3->exists('POST.picture')) || ($f3->exists('POST.weight')) || ($f3->exists('POST.height')) || ($f3->exists('POST.hand')) || ($f3->exists('POST.history'))) { 
-  //         //Création de l'utilisateur
-  //           $this->model->inscription(
-  //             $f3, 
-  //             array(
-  //               'firstname'=>$f3->get('POST.firstname'),
-  //               'lastname'=>$f3->get('POST.lastname'),
-  //               'email'=>$f3->get('POST.email'),
-  //               'password'=>$f3->get('POST.password'),
-  //               'passwordConfirm'=>$f3->get('POST.passwordConfirm'),
-  //               'sexe'=>$f3->get('POST.sexe'),
-  //               'birthday'=>$f3->get('POST.birthday'),
-  //               'level'=>$f3->get('POST.level'),
-  //               'available'=>$f3->get('POST.available'),
-  //               'picture'=>$f3->get('POST.picture'),
-  //               'weight'=>$f3->get('POST.weight'),
-  //               'height'=>$f3->get('POST.height'),
-  //               'hand'=>$f3->get('POST.hand'),
-  //               'history'=>$f3->get('POST.history')
-  //             )
-  //           );
-
-  //           $errorPasswordConfirm = $f3->get('SESSION.error.PasswordConfirm');
-  //           if(isset($errorPasswordConfirm) ) {
-  //             echo $f3->get('SESSION.error.PasswordConfirm');
-  //           }
-
-  //            $errorEmailExist = $f3->get('SESSION.error.EmailExist');
-  //           if(isset($errorEmailExist) ) {
-  //             echo $f3->get('SESSION.error.EmailExist');
-  //           }
-  //     }
-  //     echo View::instance()->render('main.html');
-  //   }
 
     function inscription($f3){
+      echo View::instance()->render('inscription.html');//peut être séparer cette ligne dans une autre fonction
+      if($f3->exists('POST.nom') && $f3->exists('POST.prenom')){
       $model=new user_model();
       $f3->set('inscription',$model->inscription(
         $f3,
@@ -74,8 +34,16 @@ class user_controller extends controller{
           )
         )
       );
-      echo View::instance()->render('main.html');
+      echo View::instance()->render('confirm.html');
+      }
     }
+
+    public function searchSportifs($f3){
+      echo View::instance()->render('searchSportifs.html');
+      $f3->set('sportifs',$this->model->searchSportifs($f3,array('keywords'=>$f3->get('POST.nom'))));
+      echo View::instance()->render('sportifs.html');
+    }
+
 }
 
 
