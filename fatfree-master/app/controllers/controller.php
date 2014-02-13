@@ -12,6 +12,10 @@ protected $content;
       $this->model=new $model();
     } 
   }
+  
+  function home(){
+    echo View::instance()->render('index.html');
+  }
 
   // public function beforeroute($f3){
   //   $model=substr(get_class($this),0,strpos(get_class($this),'_')+1).'model';

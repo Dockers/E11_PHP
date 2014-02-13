@@ -1,0 +1,11 @@
+<h1>Managers trouvés : </h1>
+<?php 
+if(isset($managers)):
+foreach($managers as $manager): 
+?>
+<li><?php echo $manager->prenom_manager." - ".$manager->nom_manager; ?>
+</li>
+<?php 
+endforeach; 
+endif;
+?>
