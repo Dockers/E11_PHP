@@ -3,6 +3,13 @@
    Author's custom styles
    ========================================================================== */
 
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
 body {
     width: 100%;
     height: 100%;
@@ -98,6 +105,72 @@ body p{
     margin-top: 2.4%;
     text-align: center;
 }
+/* ==========================================================================
+HEADER
+   ========================================================================== */
+a.btn {
+    font-family: 'AvenirNextLTPro-Bold', sans-serif;
+    font-size: .75em;
+    color: #868686;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    text-decoration: none;
+    line-height: .75em;
+    padding: 1em;
+    border: 2px solid #868686;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+a.btn:hover {
+    color: #e0e0e0;
+    border-color: #e0e0e0;
+    background-color: rgba(0, 0, 0, .1);
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+header {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+a.menu-btn {
+    font-size: 18px;
+    color: #E0E0E0;
+    text-decoration: none;
+    display: block;
+    padding-top: 10px;
+    margin-left: 15px;
+    width: 20px;
+    color: white;
+    -webkit-transition: color .25s ease;
+    -moz-transition: color .25s ease;
+    transition: color .25s ease;
+}
+    a.menu-btn:hover {
+        color: white;
+        -webkit-transition: color .25s ease;
+        -moz-transition: color .25s ease;
+        transition: color .25s ease;
+    }
+a.logo {
+    display: block;
+    height: 40px;
+    width: 111px;
+    background: url(img/logo.png) no-repeat;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    margin-left: -55px;
+}
+
+
+
+/* ==========================================================================
+FOOTER
+   ========================================================================== */
 
 footer {
     height: 20px;
@@ -149,87 +222,16 @@ footer {
         }
 
 
-========================================= */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
+404
    ========================================================================== */
 
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+.imgcontainer{
+    height: 100%;
+    width: 100%;
+    background: url(../images/404.png) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
