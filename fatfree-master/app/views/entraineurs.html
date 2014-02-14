@@ -1,0 +1,11 @@
+<h1>Entraineurs trouvés : </h1>
+<?php 
+if(isset($entraineurs)):
+foreach($entraineurs as $entraineur): 
+?>
+<li><?php echo $entraineur->prenom_entraineur." - ".$entraineur->nom_entraineur; ?>
+</li>
+<?php 
+endforeach; 
+endif;
+?>
