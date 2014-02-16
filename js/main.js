@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
-	var sidebar = $('#sidebar');
-	var overlay = $('#overlay');
+	var sidebar = $('#sidebar')
+		overlay = $('#overlay');
 
 	// Trigger video animation on homepage 
     $('.section').on("mouseenter", hoverHome);
@@ -29,9 +29,9 @@ $( document ).ready(function() {
 
 
     function hoverHome() {
-        var _this = $(this);
-        var video = _this.find('video');
-        var videoWrap = video.parent('.video-container');
+        var _this = $(this),
+        	video = _this.find('video'),
+        	videoWrap = video.parent('.video-container');
         videoWrap.css('opacity', '1');
         video[0].play();
         _this.removeClass('bgOn');	
@@ -88,7 +88,6 @@ $( document ).ready(function() {
 	function previewLoading() {
 		var previewContent = $('#preview .wrap'),
 			loader = $('#preview .loading');
-
 		TweenLite.to(loader, 0.25, {opacity:0,display:'none',ease:Power1.easeInOut,delay:1.5});
 		TweenLite.to(previewContent, 0.4, {opacity:1,ease:Power1.easeInOut,delay:1.5});
 	}

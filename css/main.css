@@ -99,9 +99,9 @@ textarea {
    ========================================================================== */
 
 body {
-  /*  width: 100%;
+    width: 100%;
     height: 100%;
-*/    
+    
     font-size: 100%;
     font-size: 16px;
     font-size: 1em;
@@ -151,10 +151,6 @@ header {
     width: 100%;
     background-color: black;
     position: absolute; top: 0; left: 0;
-}
-header.home {
-    position: absolute;
-    top: 0;
     z-index: 999;
 }
 a.menu-btn,
@@ -361,6 +357,10 @@ div#content {
     background-color: rgba(0,0,0,.5);
     padding-left: 0;
 }
+
+#content #preview .wrap {
+    padding: 50px;  
+}
 #content.fiche #preview .loading {
     left: 50%;
 }
@@ -495,7 +495,7 @@ div#content {
     overflow: hidden;
     opacity: 0;
 }
-    .video { 
+    .videoClass { 
         position: absolute;
         top: 0; left: 0;
         height: 100%;
