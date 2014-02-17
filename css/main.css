@@ -354,8 +354,8 @@ div#content {
     }
 
 #content.fiche #preview {
-/*    width: 77%;
-*/    display: block !important;
+    width: 77%;
+    display: block !important;
     margin: 0 auto;
     float: none;
     background-color: rgba(0,0,0,.5);
@@ -373,7 +373,6 @@ div#content {
     display: block !important;
     margin: 0 auto;
     position: relative;
-    margin-top: 25px;
 }
 
 #content.fiche #preview .wrap .pro {
@@ -590,27 +589,53 @@ footer {
 #popin {
     position: absolute;
     z-index:101;
-    width: 50%;
+    width: 65%;
     height: 50%;
-    top: 25%;
-    left: 25%;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
     background-color: #101010;
     border: 5px solid #171717;
+    padding: 15px;
+    overflow-x:hidden;
+    overflow-y:scroll;
 }
 a.closePopin {
     position: absolute;
-    z-index: 102;
-    left: 98%;
-    top: -15px;
+    z-index: 9999;
+    left: 96%;
+    top: 6px;
     color: white;
     text-decoration: none;
-    background: #000;
-    border-radius: 100%;
     width: 25px; height: 25px;
     text-align: center;
     line-height: 25px;
 }
+#popin h3 {
+    font-family: 'AvenirNextLTPro-Regular', sans-serif;
+    color: #4787ab;
+    font-size: .875em;
+    text-transform: uppercase;
+    text-align: center;
+}
 
+#popin h4 {
+    font-family: 'AvenirNextLTPro-Regular', sans-serif;
+    font-size: .875em;
+    text-decoration: underline;
+    color: #ffffff;
+}
+#popin h5 {
+    font-family: 'AvenirNextLTPro-UltLt', sans-serif;
+    font-size: .875em;
+    text-decoration: underline;
+    color: #ffffff;
+}
+#popin p {
+    font-family: 'AvenirNextLTPro-UltLt', sans-serif;
+    font-size: .875em;
+    color: #ffffff;
+}
 /* Style for the loading animation */
 .bubblingG {
     text-align: center;
