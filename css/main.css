@@ -202,6 +202,19 @@ div#content {
     overflow: hidden;
     margin-top: 50px;
 }
+    #content .loading-wrap{
+        position: absolute; top: 0; left: 0; 
+        width: 100%; height: 100%;
+        background: black;
+    }
+
+        #content .loading-wrap .loading {
+            width: 51px; height: 32px;
+            position: absolute;
+            top: 50%; left: 50%;
+            margin-left: -25px;
+            margin-top: -16px;
+        }
     section#sidebar {
         position: absolute;
         z-index: 99;
@@ -302,14 +315,6 @@ div#content {
         margin: 0 auto;
         overflow: auto;
     }
-    #preview .loading {
-        width: 51px; height: 32px;
-        position: absolute;
-        top: 50%; left: 69%;
-        margin-left: -16px;
-        margin-top: -16px;
-    }
-
     #preview img.profil {
         display: inline-block;
         float: left;
@@ -371,6 +376,7 @@ div#content {
 #content.fiche #preview .wrap .infos span.radio {width: 10px; height: 10px; border-radius: 5px; display: inline-block; vertical-align: baseline;margin-left: 15px; cursor:pointer;}
 #content.fiche #preview .wrap .infos span.radio.available {background-color: #2ecc71;}
 #content.fiche #preview .wrap .infos span.radio.unAvailable {background-color: #c0392b;}
+#content.fiche #preview .wrap .link-wrap {overflow:auto; position: absolute;top: 410px;}
 #content.fiche #preview a.btn {
     padding: .8em;
     overflow: auto;
@@ -606,6 +612,8 @@ a.closePopin {
     color: #ffffff;
 }
 /* Style for the loading animation */
+
+
 .bubblingG {
     text-align: center;
     width:80px;

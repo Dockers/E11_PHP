@@ -96,8 +96,9 @@
 
 	function previewLoading() {
 		var previewContent = $('#preview .wrap'),
-			loader = $('#preview .loading');
-		TweenLite.to(loader, 0.25, {opacity:0,display:'none',ease:Power1.easeInOut,delay:1.5});
+			loader = $('#content .loading-wrap');
+			TweenLite.set(previewContent, {opacity:0});	
+		TweenLite.to(loader, 0.25, {opacity: 0,display:'none',ease:Power1.easeInOut,delay:1.5});
 		TweenLite.to(previewContent, 0.4, {opacity:1,ease:Power1.easeInOut,delay:1.5});
 	}
 
