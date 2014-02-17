@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+ $( document ).ready(function() {
 
 	var sidebar = $('#sidebar')
 		overlay = $('#overlay');
@@ -40,16 +40,12 @@ $( document ).ready(function() {
         	video[0].pause();
         	_this.addClass('bgOn');	
         	videoWrap.css('opacity', '0');
-
         });
     }
 
 	// function to set #content size to window size - header
 	function contentSize() {
 		var $window = $(window);
-
-		// var contentSize = $(window).height() - 70;
-		// $('body').height($window.height()).width($window.width());
 		$('#content').width($window.width()).height($window.height() - 70);
 
 	}

@@ -110,7 +110,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    position: relative;
+    /*position: relative;*/
 }
 h1, h2 {
     font-family: 'AvenirNextLTPro-Bold', sans-serif;
@@ -294,10 +294,14 @@ div#content {
         box-sizing:border-box;
         -moz-box-sizing:border-box;
         display: inline-block;
-        width: 66.3%; height: 100%; 
-        /*padding-top: 3.125em;
-        padding-left: 3.125em;
-*/    }
+        width: 66.6%; height: 100%; 
+        
+    }
+    #preview .wrap {
+        opacity: 1;
+        margin: 0 auto;
+        overflow: auto;
+    }
     #preview .loading {
         width: 51px; height: 32px;
         position: absolute;
@@ -350,8 +354,8 @@ div#content {
     }
 
 #content.fiche #preview {
-    width: 77%;
-    display: block !important;
+/*    width: 77%;
+*/    display: block !important;
     margin: 0 auto;
     float: none;
     background-color: rgba(0,0,0,.5);
@@ -411,12 +415,8 @@ div#content {
     overflow: auto;
     display: block;
 }
-/*#content.fiche #preview .wrap:first-child() a.btn {
-    margin-left: 0;
-}*/
 
 /* Style pour la home */
-
 /* gnrl style pour les 4 sections */ 
 .section{
     width:25%;
@@ -438,11 +438,17 @@ div#content {
 .section:last-child{
     border-right:none;
 }
-.section.boxeur.bgOn {background: url("../images/boxeur.jpg") no-repeat center right;}
-.section.club.bgOn {background: url("../images/club.jpg") no-repeat top center;}
-.section.entraineur.bgOn {background: url("../images/entraineur.jpg") no-repeat;background-position-x: -700px;}
-.section.event.bgOn {background: url("../images/event.jpg") no-repeat;background-position-y: -50px;background-position-x: -390px;}
+.section.boxeur.bgOn {background: url("../images/boxeur.jpg") no-repeat center center fixed;}
+.section.club.bgOn {background: url("../images/club.jpg") no-repeat center center fixed;}
+.section.entraineur.bgOn {background: url("../images/entraineur.jpg") no-repeat center center fixed; /*background-position-x: -700px;*/}
+.section.event.bgOn {background: url("../images/event.jpg") no-repeat center center fixed; /*background-position-y: -20px;background-position-x: -390px;*/}
 
+.section.bgOn {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 /* style de typo pour les titres */
 .title-wrap{
     height:100%;
@@ -741,8 +747,8 @@ a.closePopin {
 }
 
 /*  Style for the scroll bar  */
-/* Let's get this party started */
- ::-webkit-scrollbar { width: 6px; position: absolute; } 
+
+ ::-webkit-scrollbar { width: 6px; position: absolute;} 
  /* Track */ 
  ::-webkit-scrollbar-track { 
     -webkit-border-radius: 10px; border-radius: 10px; 
@@ -877,6 +883,11 @@ a.closePopin {
     #preview {
         padding-left: 20px;
         padding-top: 20px;
+        overflow-y: scroll;
+        min-width: 300px;
+    }
+    #preview .wrap {
+        width: 240px;
     }
     #preview .wrap img {
         display: block;
@@ -891,6 +902,16 @@ a.closePopin {
     #preview p.label {
         width: 240px;
     }
+
+    #preview a.btn {
+        margin-top: 30px;
+        margin-left: 0px;
+        padding: 1.3em;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
 }
 
 @media print,
