@@ -352,67 +352,36 @@ div#content {
         margin-left: 30px;
         padding: 2em;
     }
-
-#content.fiche #preview {
-    width: 77%;
-    display: block !important;
-    margin: 0 auto;
-    float: none;
-    background-color: rgba(0,0,0,.5);
-    padding-left: 0;
-}
-
 #content #preview .wrap {
     padding: 50px;  
 }
-#content.fiche #preview .loading {
-    left: 50%;
-}
-#content.fiche #preview .wrap {
-    width: 90%;
-    display: block !important;
-    margin: 0 auto;
-    position: relative;
-}
 
-#content.fiche #preview .wrap .pro {
-    display: block;
-    width: 80px; height: 25px;
-    background-color: #4787ab;
-    font-family: 'AvenirNextLTPro-Bold', sans-serif;
-    font-size: .68em;
-    color: #fff;
-    line-height: 25px;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    padding-left: 9px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    position: absolute;
-    left: 160px;
-    top: -25px;
-}
-#content.fiche #preview .wrap .img-wrap {
-    display: inline-block;
-    width: 45%;
-}
-#content.fiche #preview .wrap img.profil {
-    margin-right: 10px;
-}
-#content.fiche #preview .wrap a.thumb {
-    display: inline-block;
-    margin-bottom: 10px;
-    width: 70px;
-}
-#content.fiche #preview .wrap .infos {
-    display: inline-block;
-    vertical-align: top;    
-}
+/* content fiche */
+#content.fiche #preview { width: 77%; display: block !important; margin: 0 auto; float: none; overflow-y:scroll; overflow-x:hidden;background-color: rgba(0,0,0,.35); padding-left: 0 }
+#content.fiche #preview .loading { left: 50% }
+#content.fiche #preview .wrap { width: 90%; padding-top: 75px; display: block !important; margin: 0 auto; position: relative }
+#content.fiche #preview .wrap .pro { display: block; width: 80px; height: 25px; background-color: #4787ab; font-family: 'AvenirNextLTPro-Bold', sans-serif; font-size: .68em; color: #fff; line-height: 25px; text-transform: uppercase; letter-spacing: .1em; padding-left: 9px; box-sizing: border-box; -moz-box-sizing: border-box; position: absolute; left: 160px; top: -25px;}
+#content.fiche #preview .wrap .img-wrap {position: relative; display: inline-block; width: 45%;}
+#content.fiche #preview .wrap img.profil {margin-right: 10px;}
+#content.fiche #preview .wrap a.thumb {display: inline-block; margin-bottom: 10px; width: 70px;}
+#content.fiche #preview .wrap .infos { display: inline-block; vertical-align: top;}
+#content.fiche #preview .wrap .infos h2 { float: left; }
+#content.fiche #preview .wrap .infos h4.palmares {font-family: 'AvenirNextLTPro-Bold', sans-serif; color: #fff; margin-top: 0; margin-bottom: 30px; font-size: 1.5em; line-height: 1.5em; }
+#content.fiche #preview .wrap .infos p.club {clear:both;font-family: 'AvenirNextLTPro-Bold', sans-serif; color: white; text-decoration: underline;font-size: .75em;margin-bottom: 25px;margin-top: 0;  }
+#content.fiche #preview .wrap .infos span.radio {width: 10px; height: 10px; border-radius: 5px; display: inline-block; vertical-align: baseline;margin-left: 15px; cursor:pointer;}
+#content.fiche #preview .wrap .infos span.radio.available {background-color: #2ecc71;}
+#content.fiche #preview .wrap .infos span.radio.unAvailable {background-color: #c0392b;}
 #content.fiche #preview a.btn {
-    margin-top: 50px;
     padding: .8em;
     overflow: auto;
     display: block;
+    width: 240px;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    line-height: 29px;
 }
 
 /* Style pour la home */
