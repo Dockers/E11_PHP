@@ -8,25 +8,9 @@ class entraineur_model extends model{
         $this->mapper=$this->getMapper('entraineurs');
      }
   
-  function inscriptionEntraineur($f3,$params){
+  function inscriptionEntraineur(){
     $inscrip=$this->mapper;
-
-    $inscrip->nom_entraineur=$params['nom_entraineur'];
-    $inscrip->prenom_entraineur=$params['prenom_entraineur'];
-    $inscrip->email_entraineur=$params['email_entraineur'];
-    $inscrip->password_entraineur=$params['password_entraineur'];
-    $inscrip->sexe_entraineur=$params['sexe_entraineur'];
-    $inscrip->codepostal_entraineur=$params['codepostal_entraineur'];
-    $inscrip->naissance_entraineur=$params['anniversaire_entraineur'];
-    $inscrip->statut_entraineur=$params['statut_entraineur'];
-    $inscrip->sport_entraineur=$params['sport_entraineur'];
-    $inscrip->diplome_entraineur=$params['diplome_entraineur'];
-    $inscrip->club_entraineur=$params['club_entraineur'];
-    $inscrip->palmares_entraineur=$params['palmares_entraineur'];
-    $inscrip->images_entraineur=$params['images_entraineur'];
-    $inscrip->videos_entraineur=$params['videos_entraineur'];
-    $inscrip->boxeurs_entraineur=$params['boxeurs_entraineur'];
-
+    $inscrip->copyFrom('POST');
     $inscrip->save();
   }
   

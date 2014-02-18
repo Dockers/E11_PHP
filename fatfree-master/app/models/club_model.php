@@ -8,17 +8,9 @@ class club_model extends model{
         $this->mapper=$this->getMapper('clubs');
      }
   
-  function creationCLub($f3,$params){
+  function creationCLub(){
     $inscrip=$this->mapper;
-
-    $inscrip->nom_club=$params['nom_club'];
-    $inscrip->email_club=$params['email_club'];
-    $inscrip->password_club=$params['password_club'];
-    $inscrip->annee_club=$params['annee_club'];
-    $inscrip->ville_club=$params['ville_club'];
-    $inscrip->sport_club=$params['sport_club'];
-    $inscrip->images_club=$params['images_club'];
-
+    $inscrip->copyFrom('POST');
     $inscrip->save();
   }
   

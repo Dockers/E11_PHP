@@ -14,25 +14,25 @@ Le header
 <form method="post" action="envoieformEvent">
 	<fieldset> <legend>Votre evenement</legend><br />
 		<label for="nom">Nom</label> : <br />
-			<input type="text" name="nom" required/><br />
+			<input type="text" name="nom_event" required/><br />
 		<label for="date">Jour de l'evenement</label> : 
 		<br />
-			<input type="date" name="date" required/>
+			<input type="date" name="date_event" required/>
 		<br />
 		<label for="heure">Heure de l'evenement</label> : 
 		<br />
-			<input type="time" name="heure" required/>
+			<input type="time" name="heure_event" required/>
 		<br />
-		<label for="photo">Photos</label> : <br />
-			<input type="file" name="photo"><br />
+		<label for="images">Photos</label> : <br />
+			<input type="file" name="img_event"><br />
 		<label for="adresse">Adresse</label> : <br />
-			<input type="text" name="adresse"><br />
+			<input type="text" name="adresse_event"><br />
 		<label for="codepostal">Code postal</label> : <br />
-			<input input name="codepostal" type="text" pattern="[0-9]*" maxlength="5" required/><br />
+			<input input name="codepostal_event" type="text" pattern="[0-9]*" maxlength="5" required/><br />
 		<label for="description">Description</label> : <br />
-			<textarea rows="4" cols="50" name="description"></textarea><br />
+			<textarea rows="4" cols="50" name="description_event"></textarea><br />
 		<label for="lien">Lien de l'événement</label> : <br />
-			<input type="text" name="lien"><br />
+			<input type="text" name="lien_event"><br />
 	</fieldset>
 	<input type="submit" name="envoi" value="Envoyer">
 	<input type="reset" name="annuler" value="Annuler" />

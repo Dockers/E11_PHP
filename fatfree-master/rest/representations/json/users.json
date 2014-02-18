@@ -10,10 +10,10 @@
 <?php if(isset($users)): ?>
 <?php foreach($users as $user):?>
 {
-"prenom":"<?php echo $user->prenom;?>",
-"nom":"<?php echo $user->nom;?>",
-"id":"<?php echo $user->id;?>",
-"user_url":"<?php echo 'http://localhost/wtfay-g1/api/users/'.$user->id; ?>"
+"prenom":"<?php echo $user->prenom_sportif;?>",
+"nom":"<?php echo $user->nom_sportif;?>",
+"id":"<?php echo $user->id_sportif;?>",
+"user_url":"<?php echo 'http://localhost/fatfree-master/api/users/'.$user->id_sportif; ?>"
 },
 <?php endforeach;?>
 <?php endif; ?>
