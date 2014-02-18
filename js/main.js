@@ -46,7 +46,7 @@
 	// function to set #content size to window size - header
 	function contentSize() {
 		var $window = $(window);
-		$('#content').width($window.width()).height($window.height() - 70);
+		$('#content').width($window.width() + 16).height($window.height() - 55);
 
 	}
 
