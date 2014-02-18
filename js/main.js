@@ -127,7 +127,7 @@
 			,connect: true
 			,step: 1
 			,serialization: {
-				resolution: 0.1
+				resolution: 0.01
 				,to: [[$('.taille .value-span-1'), 'text'],
 				 	  [$('.taille .value-span-2'), 'text']]
 			}

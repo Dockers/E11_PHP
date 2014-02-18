@@ -218,13 +218,17 @@ div#content {
             margin-left: -25px;
             margin-top: -16px;
         }
-    section#sidebar {
-        position: absolute; z-index: 99; display: inline-block; width: 33.3%; left: -33.3%; height: 100%; background-color: #171717;
+    section#sidebar { position: absolute; z-index: 99; display: inline-block; width: 33.3%; left: -33.3%; height: 100%; background-color: #171717;
         box-sizing: border-box; -moz-box-sizing: border-box; padding-left: 50px; padding-right: 50px;}
         #sidebar h4 {font-family: 'AvenirNextLTPro-Regular', sans-serif; font-size: .875em; color: #ababab; text-transform: uppercase;}
         #sidebar .value-wrap { overflow: auto; display: block; margin: 0 auto;}
-        #sidebar .value-wrap span { font-family: 'AvenirNextLTPro-Regular' sans-serif; font-size: .65em; color: #4787ab;
-            margin: 10px auto; display: inline-block; vertical-align: top; }
+        #sidebar .value-wrap span { font-family: 'AvenirNextLTPro-Regular' sans-serif; font-size: .65em; color: #4787ab;margin: 10px auto; display: inline-block; vertical-align: top; }
+
+        #sidebar .value-span-1 { float:left;}
+        #sidebar .value-span-2 { float:right;}
+            #sidebar .poid .value-span-1:after, #sidebar .poid .value-span-2:after { content:"Kg"; display: inline-block; vertical-align: baseline; padding-left: .1em;}
+            #sidebar .distance .value-span-1:after, #sidebar .distance .value-span-2:after { content:"Km"; display: inline-block; vertical-align: baseline; padding-left: .1em;}
+        #sidebar select {width: 200px; border:none; background-color: #101010;box-shadow: none;-webkit-appearance:none;font-family: 'AvenirNextLTPro-Regular', sans-serif; font-size: .875em; color: #575757; text-transform: uppercase;padding:.5em;border-radius: 0;position: relative;margin:0 auto;background-image:url(img/chevron_down.png);background-repeat: no-repeat; background-position: center right; background-position-x: 95%;}
     section#list {
         box-sizing:border-box;
         -moz-box-sizing:border-box;
@@ -414,17 +418,12 @@ div#content {
 .section:last-child{
     border-right:none;
 }
-.section.boxeur.bgOn {background: url("../images/boxeur.jpg") no-repeat center center fixed;}
-.section.club.bgOn {background: url("../images/club.jpg") no-repeat center center fixed;}
-.section.entraineur.bgOn {background: url("../images/entraineur.jpg") no-repeat center center fixed; /*background-position-x: -700px;*/}
-.section.event.bgOn {background: url("../images/event.jpg") no-repeat center center fixed; /*background-position-y: -20px;background-position-x: -390px;*/}
 
-.section.bgOn {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+.section.boxeur.bgOn {background: url("../images/boxeur.jpg") no-repeat ;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; background-size: cover;}
+.section.club.bgOn {background: url("../images/club.jpg") no-repeat;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; background-size: cover;}
+.section.entraineur.bgOn {background: url("../images/entraineur.jpg") no-repeat;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; background-size: cover;}
+.section.event.bgOn {background: url("../images/event.jpg") no-repeat;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; background-size: cover;}
+
 /* style de typo pour les titres */
 .title-wrap{
     height:100%;
