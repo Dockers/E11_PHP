@@ -5,6 +5,9 @@
 
 	// Trigger video animation on homepage 
     $('.section').on("mouseenter", hoverHome);
+    
+    // liens sur la home
+    $('#content.homeContent .section').on('click', linksHome);
 
 	// set overlay to hidden
 	TweenLite.set(overlay, {opacity:0,display:'none'});
@@ -23,8 +26,6 @@
 	// loader preview + animation
 	previewLoading();	
 
-	//
-    createSliders();
 
 	// Show or hide the overlay
 	$('footer ul li a').on('click', showPopin);
@@ -44,6 +45,13 @@
         	_this.addClass('bgOn');	
         	videoWrap.css('opacity', '0');
         });
+    }
+
+    // fonction pour rediriger vers la bonne page depuis la home
+    function linksHome() {
+    	var _this = $(this);
+    	var url = _this.attr('id') + '.html';
+		window.location = url;
     }
 
 	// function to set #content size to window size - header
@@ -106,7 +114,6 @@
 	}
 
 	function createSliders() {
-
 		$('#poid').noUiSlider({
 			 range: [60,120]
 			,start: [70,85]
@@ -119,7 +126,6 @@
 				 	  [$('.poid .value-span-2'), 'text']]
 			}
 		});
-
 		$('#taille').noUiSlider({
 			 range: [1.5,2.2]
 			,start: [1.8,1.9]
@@ -132,7 +138,6 @@
 				 	  [$('.taille .value-span-2'), 'text']]
 			}
 		});
-
 		$('#distance').noUiSlider({
 			 range: [0,300]
 			,start: [0,150]
@@ -145,10 +150,6 @@
 				 	  [$('.distance .value-span-2'), 'text']]
 			}
 		});
-
-		// $('#poid').find('.noUi-handle-lower').html('<span class="value-span-1"></span>');
-		// $('#poid').find('.noUi-handle-upper').html('<span class="value-span-2"></span>');
-
 	}
 
 
