@@ -23,6 +23,9 @@
 	// loader preview + animation
 	previewLoading();	
 
+	//
+    createSliders();
+
 	// Show or hide the overlay
 	$('footer ul li a').on('click', showPopin);
 	$('#popin').on('click', "a.closePopin", closePopin);
@@ -101,5 +104,53 @@
 		TweenLite.to(loader, 0.25, {opacity: 0,display:'none',ease:Power1.easeInOut,delay:1.5});
 		TweenLite.to(previewContent, 0.4, {opacity:1,ease:Power1.easeInOut,delay:1.5});
 	}
+
+	function createSliders() {
+
+		$('#poid').noUiSlider({
+			 range: [60,120]
+			,start: [70,85]
+			,handles: 2
+			,connect: true
+			,step: 1
+			,serialization: {
+				resolution: 1
+				,to: [[$('.poid .value-span-1'), 'text'],
+				 	  [$('.poid .value-span-2'), 'text']]
+			}
+		});
+
+		$('#taille').noUiSlider({
+			 range: [1.5,2.2]
+			,start: [1.8,1.9]
+			,handles: 2
+			,connect: true
+			,step: 1
+			,serialization: {
+				resolution: 0.1
+				,to: [[$('.taille .value-span-1'), 'text'],
+				 	  [$('.taille .value-span-2'), 'text']]
+			}
+		});
+
+		$('#distance').noUiSlider({
+			 range: [0,300]
+			,start: [0,150]
+			,handles: 2
+			,connect: true
+			,step: 1
+			,serialization: {
+				resolution: 1
+				,to: [[$('.distance .value-span-1'), 'text'],
+				 	  [$('.distance .value-span-2'), 'text']]
+			}
+		});
+
+		// $('#poid').find('.noUi-handle-lower').html('<span class="value-span-1"></span>');
+		// $('#poid').find('.noUi-handle-upper').html('<span class="value-span-2"></span>');
+
+	}
+
+
 
 });
