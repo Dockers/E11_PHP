@@ -26,7 +26,7 @@ class Connexion_controller extends controller{
             'prenom'=>$auth->prenom_sportif
           );
           $f3->set('SESSION',$user);
-          $f3->reroute('/');
+          $f3->reroute('/mainSportif.html');
         }
       break;
       }
@@ -36,6 +36,10 @@ class Connexion_controller extends controller{
     // $f3->clear('SESSION.id');
     session_destroy();
     $f3->reroute('/connexion');
+  }
+
+  public function inscription($f3){
+     $this->tpl['sync']='inscription.html';
   }
 
 }

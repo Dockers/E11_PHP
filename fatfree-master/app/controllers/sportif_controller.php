@@ -9,12 +9,12 @@ class sportif_controller extends controller{
     function inscriptionSportif($f3){
       echo View::instance()->render('inscriptionSportif.html');
       $f3->set('inscriptionSportif',$this->model->inscriptionSportif());
+      echo View::instance()->render('mainSportif.html');
     }
 
     public function searchSportifs($f3){
-      echo View::instance()->render('searchSportifs.html');
       $f3->set('sportifs',$this->model->searchSportifs(array('keywords'=>$f3->get('POST.keywords'))));
-      echo View::instance()->render('sportifs.html');
+      $this->tpl['async']='partials/sportifs.html';
     }
 
 }

@@ -11,13 +11,21 @@
 <body>
 Le header
 	<div class="container">
-<form method="post" action="connexion">
-	<input type="text" name="email" placeholder="email">
-	<input type="password" name="password" placeholder="mot de passe">
-	<input type="submit" name="envoi" value="Connexion">
-</form>
-<li><a href="inscription">Pas encore inscrit ?</a></li>
+
+  <ul>
+    Recherche
+  	<li><a href="searchSportifs">liste des sportifs</a></li>
+    <li><a href="searchEntraineurs">liste des entraineurs</a></li>
+    <li><a href="searchManagers">liste des managers</a></li>
+  	<li><a href="listEvents">liste des events</a></li>
+  	<li><a href="searchClubs">liste des clubs</a></li>
+  </ul>
+  <ul class="users">
+    <?php require('partials/sportifs.html'); ?>
+  </ul>
+
 <?php var_dump($_SESSION) ?>
+ 
 </body>
 <footer>
 	Le footer

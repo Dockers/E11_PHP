@@ -6,10 +6,10 @@ protected $model;
 
 
   protected function __construct(){
-    // $f3=\Base::instance();
-    // if($f3->get('PATTERN')!='signin'&&!$f3->get('SESSION.id')){
-    //   $f3->reroute('/connexion');
-    // }
+    $f3=\Base::instance();
+    if($f3->get('PATTERN')!='/connexion'&&$f3->get('PATTERN')!='/inscription'&&$f3->get('PATTERN')!='/formInscriptionSportif'&&$f3->get('PATTERN')!='/formInscriptionEntraineur'&&$f3->get('PATTERN')!='/formInscriptionManageur'&&!$f3->get('SESSION.id')){
+      $f3->reroute('/connexion');
+    }
   }
   
   function home(){
