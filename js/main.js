@@ -26,6 +26,9 @@
 	// loader preview + animation
 	previewLoading();	
 
+    createSliders();
+	
+	
 
 	// Show or hide the overlay
 	$('footer ul li a').on('click', showPopin);
