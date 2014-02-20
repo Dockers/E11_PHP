@@ -9,12 +9,15 @@ class entraineur_controller extends controller{
     function inscriptionEntraineur($f3){
       echo View::instance()->render('inscriptionEntraineur.html');
       $f3->set('inscriptionEntraineur',$this->model->inscriptionEntraineur());
+      echo View::instance()->render('mainEntraineur.html');
     }
 
-    public function searchEntraineurs($f3){
-      echo View::instance()->render('searchEntraineurs.html');
-      $f3->set('entraineurs',$this->model->searchEntraineurs($f3,array('keywords'=>$f3->get('POST.keywords'))));
-      echo View::instance()->render('entraineurs.html');
+    function searchEntraineurs($f3){
+      $this->tpl=array('sync'=>'searchEntraineurs.html');
+      if($f3->exists('POST.keywords')){
+        $f3->set('entraineurs',$this->model->searchEntraineurs(array('keywords'=>$f3->get('POST.keywords'))));
+        $this->tpl['async']='partials/entraineurs.html';
+      }
     }
 
 }

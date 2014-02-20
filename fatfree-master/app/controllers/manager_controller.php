@@ -12,9 +12,11 @@ class manager_controller extends controller{
     }
 
     public function searchManagers($f3){
-      echo View::instance()->render('searchManagers.html');
-      $f3->set('managers',$this->model->searchManagers($f3,array('keywords'=>$f3->get('POST.keywords'))));
-      echo View::instance()->render('managers.html');
+       $this->tpl=array('sync'=>'searchManagers.html');
+      if($f3->exists('POST.keywords')){
+        $f3->set('managers',$this->model->searchManagers(array('keywords'=>$f3->get('POST.keywords'))));
+        $this->tpl['async']='partials/managers.html';
+      }
     }
 
 }

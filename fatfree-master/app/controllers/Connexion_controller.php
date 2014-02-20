@@ -26,7 +26,7 @@ class Connexion_controller extends controller{
             'prenom'=>$auth->prenom_sportif
           );
           $f3->set('SESSION',$user);
-          $f3->reroute('/mainSportif.html');
+          $f3->reroute('/app/views/mainSportif.html');
         }
       break;
       }

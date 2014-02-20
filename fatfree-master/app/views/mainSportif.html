@@ -13,18 +13,16 @@ Le header
 	<div class="container">
 
   <ul>
+
+<?php var_dump($_SESSION) ?>
     Recherche
   	<li><a href="searchSportifs">liste des sportifs</a></li>
     <li><a href="searchEntraineurs">liste des entraineurs</a></li>
     <li><a href="searchManagers">liste des managers</a></li>
-  	<li><a href="listEvents">liste des events</a></li>
+  	<li><a href="searchEvents">liste des events</a></li>
   	<li><a href="searchClubs">liste des clubs</a></li>
   </ul>
-  <ul class="users">
-    <?php require('partials/sportifs.html'); ?>
-  </ul>
-
-<?php var_dump($_SESSION) ?>
+  <li><a href="deconnexion">deconnexion</a></li>
  
 </body>
 <footer>

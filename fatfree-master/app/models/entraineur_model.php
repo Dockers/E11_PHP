@@ -14,7 +14,7 @@ class entraineur_model extends model{
     $inscrip->save();
   }
   
-    function searchEntraineurs($f3, $params) {
+    function searchEntraineurs($params) {
       $requete = $this->mapper;
       return $requete->find('nom_entraineur like "%'.$params['keywords'].'%" or prenom_entraineur like "%'.$params['keywords'].'%"');
     }

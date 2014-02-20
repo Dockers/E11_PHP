@@ -14,7 +14,7 @@ class event_model extends model{
     $crea->save();
   }
   
-    function searchEvents($f3, $params) {
+    function searchEvents($params) {
       $requete = $this->mapper;
       return $requete->find('nom_event like "%'.$params['keywords'].'%"');
     }

@@ -1,0 +1,11 @@
+<h1>Events trouvés : </h1>
+<?php 
+if(isset($events)):
+foreach($events as $event): 
+?>
+<li><?php echo $event->nom_event."-".$event->date_event; ?>
+</li>
+<?php 
+endforeach; 
+endif;
+?>

@@ -14,7 +14,7 @@ class club_model extends model{
     $inscrip->save();
   }
   
-    function searchClubs($f3, $params) {
+    function searchClubs($params) {
       $requete = $this->mapper;
       return $requete->find('nom_club like "%'.$params['keywords'].'%"');
     }

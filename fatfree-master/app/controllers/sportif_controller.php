@@ -12,9 +12,12 @@ class sportif_controller extends controller{
       echo View::instance()->render('mainSportif.html');
     }
 
-    public function searchSportifs($f3){
-      $f3->set('sportifs',$this->model->searchSportifs(array('keywords'=>$f3->get('POST.keywords'))));
-      $this->tpl['async']='partials/sportifs.html';
+    function searchSportifs($f3){
+      $this->tpl=array('sync'=>'searchSportifs.html');
+      if($f3->exists('POST.keywords')){
+        $f3->set('sportifs',$this->model->searchSportifs(array('keywords'=>$f3->get('POST.keywords'))));
+        $this->tpl['async']='partials/sportifs.html';
+      }
     }
 
 }

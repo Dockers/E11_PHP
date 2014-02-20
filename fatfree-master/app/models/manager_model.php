@@ -14,7 +14,7 @@ class manager_model extends model{
     $inscrip->save();
   }
   
-    function searchManagers($f3, $params) {
+    function searchManagers($params) {
       $requete = $this->mapper;
       return $requete->find('nom_manager like "%'.$params['keywords'].'%" or prenom_manager like "%'.$params['keywords'].'%"');
     }
