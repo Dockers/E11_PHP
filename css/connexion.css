@@ -1,0 +1,235 @@
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    position: fixed;
+    background:url('../images/background_hand.jpg') no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 0.75em;
+    font-family: 'AvenirNextLTPro-UltLt';
+}
+.logo{
+        width: 243px;
+        padding-top: 12.6%;
+        height: 91px;
+        padding-bottom: 1.8%;
+        margin: 0 auto;
+        display: block;
+        padding-left: 37px;
+}
+form{
+    display:block;
+    width: 273px;
+    height: 155px;
+    margin: 0 auto;
+}
+input{
+    width:272px;
+    height: 49px;
+    display: block;
+    color:#aaa;
+    padding:  0 10px;
+    font-family: "AvenirNextLTPro-Regular";
+       outline: none;
+}
+input:not(.mail){
+      border:none;
+}
+.mail{
+    border-bottom:1px solid;
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
+    border-color: #ccc;
+}
+input:not(.submit):focus{
+   background:#f4f1f1;
+}
+.submit{
+    margin-top: 1.4%;
+    background: #529ecc;
+    color:white;
+    font-family: 'AvenirNextLTPro-Bold';
+    font-size: 1em;
+    padding:  0 10px;
+    width: 292px;
+    box-shadow: 
+    line-height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.1s ease-in-out;
+    -webkit-transition: background 0.1s ease-in-out;
+    -moz-transition: background 0.1s ease-in-out;
+    -ms-transition: background 0.1s ease-in-out;
+    -o-transition: background 0.1s ease-in-out;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 0px 0px #417ea3;
+}
+.submit:active {
+    padding-top: 5px;
+    margin-bottom: -1px;
+}
+.submit, .submit:hover, .submit:active {
+    outline: 0 none;
+    text-decoration: none;
+    color: #fff;
+}
+.submit:hover {
+    background-color: #59addf;
+}
+.submit:active {
+    box-shadow: 0px 1px 0px 0px #417ea3;
+}
+
+body p{
+    text-decoration:underline;
+    color:white;
+    margin-top: 2.4%;
+    text-align: center;
+}
+
+footer {
+    height: 20px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+}
+    footer ul, footer li {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    footer ul.links {
+        padding-left: 10px;
+        width: 250px;
+        display: inline-block;
+    }
+    footer ul.social {
+        float: right;
+        padding-right: 10px;
+    }
+    footer ul.social li {
+        width: 10px;
+    }
+    footer li {
+        display: inline-block;
+        height: 20px;
+        color: #bababa;
+        line-height: 20px;
+        font-size: 11px;
+    }
+        footer li a {
+            display: inline-block;
+            font-size: 11px;
+            color: #bababa;
+            text-transform: uppercase;
+            text-decoration: none;
+            line-height: 20px;
+            -webkit-transition: color .25s ease;
+            -moz-transition: color .25s ease;
+            transition: color .25s ease;
+        }
+        footer li a:hover {
+            color: white;
+            -webkit-transition: color .25s ease;
+            -moz-transition: color .25s ease;
+            transition: color .25s ease;
+        }
+
+
+========================================= */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
