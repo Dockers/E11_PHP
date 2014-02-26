@@ -51,11 +51,11 @@
     }
 
     // fonction pour rediriger vers la bonne page depuis la home
-    function linksHome() {
-    	var _this = $(this);
-    	var url = _this.attr('id') + '.html';
-		window.location = url;
-    }
+  //   function linksHome() {
+  //   	var _this = $(this);
+  //   	var url = _this.attr('id') + '.html';
+		// window.location = url;
+  //   }
 
 	// function to set #content size to window size - header
 	function contentSize() {
