@@ -1,0 +1,294 @@
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    position: fixed;
+    background:url('../images/bg_inscription.jpg') no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 0.75em;
+    font-family: 'AvenirNextLTPro-UltLt';
+}
+.logo{
+        width: 248px;
+        padding-top: 9px;
+        padding-bottom: 14px;
+        margin: 0 auto;
+        display: block;
+}
+form{
+    display:block;
+    width: 547px;
+    height: 493px;
+    margin: 0 auto;
+    background: rgba(23,23,23,0.85);
+    font-size: 24px;
+    line-height: 1.25;
+    text-shadow: 0.5px 0.866px 1px rgb( 0, 0, 0 );
+    margin-bottom: 91px;
+}
+legend{
+    padding-left: 17px;
+    color:#4787ab;
+    font-size: 24px;
+    font-family: "AvenirNextLTPro-Regular";
+    padding-top: 15px;
+}
+.legend_subtitles{
+  background-color: rgb( 233, 233, 233 );
+  opacity: 0.8;
+  width: 577px;
+  height: 42px;
+  z-index: 61;
+  color:black;
+  font-size: 12px;
+  font-family: 'AvenirNextLTPro-UltLt';
+  position:relative;
+  left:-54px;
+  line-height: 42px;
+  margin-bottom: 21px;
+}
+.triangle{
+width: 0;
+height: 0;
+position: relative;
+display: inline-block;
+}
+.topleft{
+top: -20px;
+right: 0px;
+border-top: 17px solid #888686;
+border-left: 17px solid transparent;
+}
+.topright{
+top: -20px;
+left: 540px;
+border-top: 17px solid #888686;
+border-right: 17px solid transparent;
+}
+.legend_subtitles p {
+     padding-left: 50px;
+}
+fieldset{
+    border:0;
+    padding-left: 37px;
+    padding-bottom: 20px;
+}
+input:not([type="submit"]):not([type="date"]):not([type="radio"]){
+    width:200px;
+    height:1px;
+    background: url('../images/input.png')no-repeat center center;
+    color:#bababa;
+    font-family: "AvenirNextLTPro-Regular";
+    border:none;
+}
+
+input:focus{
+border: none;
+-moz-border: none;
+background-color: #f2f2f2;
+color: #242424;
+outline: none;
+}
+.champ{
+    display: inline-block;
+    margin-right: 50px;
+}
+label:not(.sexe){
+    display: block;
+    width:200px;
+    font-size: 12px;
+    color:#7a7979;
+    font-family: 'AvenirNextLTPro-Medium';
+    text-transform: uppercase;
+}
+.sexe{
+    font-size: 12px;
+    color:#7a7979;
+    font-family: 'AvenirNextLTPro-Medium';
+    text-transform: uppercase;
+}
+.sexe_input{
+    margin-bottom: 10px;
+}
+.submit{
+  background-color: rgb( 71, 135, 171 );
+  box-shadow: 1px 1px 0px 0px rgb( 0, 0, 0 );
+  width: 121px;
+  height: 31px;
+  text-transform: uppercase;
+  color:white;
+  margin-top: 77px;
+  border:none;
+}
+.mail{
+    border-bottom:1px solid;
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
+    border-color: #ccc;
+}
+
+.submit:active {
+    padding-top: 5px;
+    margin-bottom: -1px;
+    background-color: rgb( 71, 135, 171 );
+  box-shadow: 1px 1px 0px 0px rgb( 0, 0, 0 );
+}
+.etape {
+background-color: rgb( 187, 187, 187 );
+position: relative;
+left: 517px;
+bottom: 32px;
+width: 30px;
+height: 24px;
+display: inline-block;
+font-size: 12px;
+text-align: center;
+line-height: 24px;
+}
+
+
+footer {
+    height: 20px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+}
+    footer ul, footer li {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    footer ul.links {
+        padding-left: 10px;
+        width: 250px;
+        display: inline-block;
+    }
+    footer ul.social {
+        float: right;
+        padding-right: 10px;
+    }
+    footer ul.social li {
+        width: 10px;
+    }
+    footer li {
+        display: inline-block;
+        height: 20px;
+        color: #bababa;
+        line-height: 20px;
+        font-size: 11px;
+    }
+        footer li a {
+            display: inline-block;
+            font-size: 11px;
+            color: #bababa;
+            text-transform: uppercase;
+            text-decoration: none;
+            line-height: 20px;
+            -webkit-transition: color .25s ease;
+            -moz-transition: color .25s ease;
+            transition: color .25s ease;
+        }
+        footer li a:hover {
+            color: white;
+            -webkit-transition: color .25s ease;
+            -moz-transition: color .25s ease;
+            transition: color .25s ease;
+        }
+
+
+========================================= */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
