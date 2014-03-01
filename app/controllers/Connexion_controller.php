@@ -26,7 +26,7 @@ class Connexion_controller extends controller{
             'prenom'=>$auth->prenom_sportif
           );
           $f3->set('SESSION',$user);
-          $f3->reroute('/app/views/mainSportif.html');
+          $f3->reroute('/app/views/home.html');
         }
       break;
       }
@@ -40,6 +40,16 @@ class Connexion_controller extends controller{
 
   public function inscription($f3){
      $this->tpl['sync']='inscription.html';
+  }
+
+  public function visiteur($f3){
+    $user=array(
+            'id'=>'visiteur',
+            'nom'=>'visiteur',
+            'prenom'=>'visiteur'
+          );
+          $f3->set('SESSION',$user);
+          $f3->reroute('/app/views/mainSportif.html');
   }
 
 }

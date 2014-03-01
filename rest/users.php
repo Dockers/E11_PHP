@@ -8,9 +8,9 @@ class users extends \REST\api{
     
     $dB=new \DB\SQL('mysql:host='.$f3->get('db_host').';port=3306;dbname='.$f3->get('db_server'),$f3->get('db_login'),$f3->get('db_password'));
     $mapper=new \DB\SQL\Mapper($dB,'sportifs');
-    echo 'test';
     $f3->set('users',$mapper->find(array(),array('order'=>'nom_sportif')));
     $this->tpl='json/users.php';
+    echo $users;
   }
   
   public function post($f3){
