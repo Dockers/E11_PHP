@@ -7,7 +7,7 @@
     $('.section').on("mouseenter", hoverHome);
     
     // liens sur la home
-    $('#content.homeContent .section').on('click', linksHome);
+    // $('#content.homeContent .section').on('click', linksHome);
 
 	// set overlay to hidden
 	TweenLite.set(overlay, {opacity:0,display:'none'});
