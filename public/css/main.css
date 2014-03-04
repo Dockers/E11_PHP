@@ -246,8 +246,8 @@ div#content {
     section#sidebar { position: absolute; z-index: 99; display: inline-block; width: 33.3%; left: -33.3%; height: 100%; background-color: #171717;
         box-sizing: border-box; -moz-box-sizing: border-box; padding-left: 50px; padding-right: 50px;}
         #sidebar h4 {font-family: 'AvenirNextLTPro-Regular', sans-serif; font-size: .875em; color: #ababab; text-transform: uppercase;}
-        #sidebar .value-wrap { overflow: auto; display: block; margin: 0 auto;}
-        #sidebar .value-wrap span { font-family: 'AvenirNextLTPro-Regular' sans-serif; font-size: .65em; color: #4787ab;margin: 10px auto; display: inline-block; vertical-align: top; }
+        #sidebar .value-wrap { overflow: auto; display: block; margin: 0 auto; }
+        #sidebar .value-wrap input { font-family: 'AvenirNextLTPro-Regular' sans-serif; font-size: .65em; color: #4787ab;margin: 10px auto; display: inline-block; vertical-align: top; color: white; background-color: transparent; border: none;}
 
         #sidebar .value-span-1 { float:left;}
         #sidebar .value-span-2 { float:right;}
