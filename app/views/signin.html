@@ -1,12 +1,12 @@
 <?php require('header.html');?>
     <body>
         <img src="public/images/logotypo.png" class="logo"/>
-        <form method="post" action="connexion">
+        <form method="post" action="connexion" id="connexionBox">
             <input type="email" name="email" class="mail" placeholder="E-MAIL" required onclick="this.placeholder='';" onblur="this.placeholder=!this.placeholder?'E-MAIL':this.placeholder;" />
             <input type="password" name="password" placeholder="MOT DE PASSE" required onclick="this.placeholder='';"onblur="this.placeholder=!this.placeholder?'MOT DE PASSE':this.placeholder;"/>
             <input type="submit" class="submit" name="submit" value="CONNEXION"/>
         </form>
-        <a href="#">    <p> Pas encore inscrit ? </p>  </a>
+        <a href="#" class="inscriptionLink">    <p> Pas encore inscrit ? </p>  </a>
 
         <footer>
             <ul class="links">

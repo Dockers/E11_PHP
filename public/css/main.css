@@ -3,78 +3,7 @@
    Author's custom styles
    ========================================================================== */
 
-/* Style page connexion ? -> */
-form {
-    display:block;
-    width: 273px;
-    height: 155px;
-    margin: 0 auto;
-}
-input {
-    width:272px;
-    height: 49px;
-    display: block;
-    color:#aaa;
-    padding:  0 10px;
-    font-family: "AvenirNextLTPro-Regular";
-    outline: none;
-}
-input:not(.mail){
-      border:none;
-}
-.mail{
-    border-bottom:1px solid;
-    border-top:0px;
-    border-left:0px;
-    border-right:0px;
-    border-color: #ccc;
-}
-input:not(.submit):focus{
-   background:#f4f1f1;
-}
-.submit{
-    margin-top: 1.4%;
-    background: #529ecc;
-    color:white;
-    font-family: 'AvenirNextLTPro-Bold';
-    font-size: 1em;
-    padding:  0 10px;
-    width: 292px;
-    box-shadow: 
-    line-height: 100%;
-    vertical-align: middle;
-    text-align: center;
-    cursor: pointer;
-    transition: background 0.1s ease-in-out;
-    -webkit-transition: background 0.1s ease-in-out;
-    -moz-transition: background 0.1s ease-in-out;
-    -ms-transition: background 0.1s ease-in-out;
-    -o-transition: background 0.1s ease-in-out;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 3px 0px 0px #417ea3;
-}
-.submit:active {
-    padding-top: 5px;
-    margin-bottom: -1px;
-}
-.submit, .submit:hover, .submit:active {
-    outline: 0 none;
-    text-decoration: none;
-    color: #fff;
-}
-.submit:hover {
-    background-color: #59addf;
-}
-.submit:active {
-    box-shadow: 0px 1px 0px 0px #417ea3;
-}
 
-body p {
-    text-decoration:underline;
-    color:white;
-    margin-top: 2.4%;
-    text-align: center;
-}
 
 /* ==========================================================================
     GENERAL STYLE
@@ -157,11 +86,11 @@ a.back-btn {
         -moz-transition: color .25s ease;
         transition: color .25s ease;
     }
-a.logo {
+a.logo, img.logo {
     display: block;
     height: 40px;
     width: 111px;
-    background: url(../../img/logo.png) no-repeat;
+    background: url('../images/logo.png') no-repeat;
     position: absolute;
     top: 5px;
     left: 50%;
@@ -289,7 +218,7 @@ header.home a.logo {
    ========================================================================== */
 
 div#content {
-    background: url(img/preview-bg.jpg) no-repeat center center;
+    background: url('../images/preview-bg.jpg') no-repeat center center;
     background-position: fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -546,6 +475,94 @@ footer {
             -moz-transition: color .25s ease;
             transition: color .25s ease;
         }
+
+/* ==========================================================================
+    PAGE CONNEXION / INSCRIPTION
+   ========================================================================== */
+/**
+
+- optimiser le style de connexion
+- importer ton taf sur inscription (pour les input background:transparent avec border-bottom (pas oublier le border:none), pour le focus : background:white !important; pour réecrire sur transparent  ||||  virer les labels et mettre des placeholder tu peux les styler avec text-transform line-height etc) ||||  Sortir le titre et sous-titre du form 
+- faire toutes les pages inscriptions part2 dans différents fichiers php en commencant par le <fieldset>
+
+**/
+
+
+/* Style page connexion ? -> */
+form#connexionBox {
+    display:block;
+    width: 273px;
+    height: 155px;
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom: 0;
+    margin: auto;
+}
+    form#connexionBox input {
+        width:272px;
+        height: 49px;
+        display: block;
+        color:#aaa;
+        padding:  0 10px;
+        font-family: "AvenirNextLTPro-Regular";
+        outline: none;
+    }
+    form#connexionBox input:not(.mail){
+          border:none;
+    }
+    form#connexionBox .mail{
+        border-bottom:1px solid;
+        border-top:0px;
+        border-left:0px;
+        border-right:0px;
+        border-color: #ccc;
+    }
+    form#connexionBox input:not(.submit):focus{
+       background:#f4f1f1;
+    }
+    form#connexionBox .submit{
+        margin-top: 1.4%;
+        background: #529ecc;
+        color:white;
+        font-family: 'AvenirNextLTPro-Bold';
+        font-size: 1em;
+        padding:  0 10px;
+        width: 292px;
+        box-shadow: 
+        line-height: 100%;
+        vertical-align: middle;
+        text-align: center;
+        cursor: pointer;
+        transition: background 0.1s ease-in-out;
+        -webkit-transition: background 0.1s ease-in-out;
+        -moz-transition: background 0.1s ease-in-out;
+        -ms-transition: background 0.1s ease-in-out;
+        -o-transition: background 0.1s ease-in-out;
+        text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 3px 0px 0px #417ea3;
+    }
+    form#connexionBox .submit:active {
+        padding-top: 5px;
+        margin-bottom: -1px;
+    }
+    form#connexionBox .submit, .submit:hover, .submit:active {
+        outline: 0 none;
+        text-decoration: none;
+        color: #fff;
+    }
+    form#connexionBox .submit:hover {
+        background-color: #59addf;
+    }
+    form#connexionBox .submit:active {
+        box-shadow: 0px 1px 0px 0px #417ea3;
+    }
+
+    .inscriptionLink {
+        text-decoration:underline;
+        color:white;
+        margin-top: 2.4%;
+        text-align: center;
+    }
+
 /* ==========================================================================
     PAGE 404
    ========================================================================== */
@@ -553,7 +570,7 @@ footer {
 .imgcontainer{
     height: 100%;
     width: 100%;
-    background: url(../images/404.png) no-repeat center fixed;
+    background: url('../images/404.png') no-repeat center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
