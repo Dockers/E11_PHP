@@ -82,28 +82,20 @@
             </section>
             <section id="list">
                 <ul>
-                    <li class="selected">
-                        <p class="name">kimbo slice</p>
-                        <p>boxe française</p>
-                        <i class="icon-chevron_right"></i>
-                    </li>
-
-                    <li>
-                        <p class="name">kimbo slice</p>
-                        <p>boxe française</p>
-                        <i class="icon-chevron_right"></i>
-                    </li>
-                    <li>
-                        <p class="name">kimbo slice</p>
-                        <p>boxe française</p>
-                        <i class="icon-chevron_right"></i>
-                    </li>
-                    <li>
-                        <p class="name">kimbo slice</p>
-                        <p>boxe française</p>
-                        <i class="icon-chevron_right"></i>
-                    </li>
-                    <li>
+                    <?php 
+                        if(isset($sportifs)):
+                        foreach($sportifs as $sportif): 
+                    ?>
+                        <li>
+                            <p class="name"><?php echo $sportif->prenom_sportif." ".$sportif->nom_sportif; ?></p>
+                            <p><?php echo $sportif->sport_sportif ?></p>
+                            <i class="icon-chevron_right"></i>
+                        </li>
+                    <?php 
+                        endforeach; 
+                        endif;
+                    ?>
+                    <!-- <li>
                         <p class="name">kimbo slice</p>
                         <p>boxe française</p>
                         <i class="icon-chevron_right"></i>
@@ -128,6 +120,21 @@
                         <p>boxe française</p>
                         <i class="icon-chevron_right"></i>
                     </li>
+                    <li>
+                        <p class="name">kimbo slice</p>
+                        <p>boxe française</p>
+                        <i class="icon-chevron_right"></i>
+                    </li>
+                    <li>
+                        <p class="name">kimbo slice</p>
+                        <p>boxe française</p>
+                        <i class="icon-chevron_right"></i>
+                    </li>
+                    <li>
+                        <p class="name">kimbo slice</p>
+                        <p>boxe française</p>
+                        <i class="icon-chevron_right"></i>
+                    </li> -->
                 </ul>
 
             </section>

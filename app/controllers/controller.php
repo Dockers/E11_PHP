@@ -13,6 +13,7 @@ protected $model;
   }
   
   function home(){
+    
   }
 
   

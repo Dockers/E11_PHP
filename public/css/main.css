@@ -2,55 +2,22 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* 02/03 17:40 -> old
-html,
-button,
-input,
-select,
-textarea {
-    color: #222;
-}
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    position: fixed;
-    background:url('../images/background_hand.jpg') no-repeat center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    font-size: 0.75em;
-    font-family: 'AvenirNextLTPro-UltLt';
-}
-.logo{
-        width: 243px;
-        padding-top: 12.6%;
-        height: 91px;
-        padding-bottom: 1.8%;
-        margin: 0 auto;
-        display: block;
-        padding-left: 37px;
-}*/
 
-/*// Style page connexion ? -> */
-
-/*form{
+/* Style page connexion ? -> */
+form {
     display:block;
     width: 273px;
     height: 155px;
     margin: 0 auto;
 }
-input{
+input {
     width:272px;
     height: 49px;
     display: block;
     color:#aaa;
     padding:  0 10px;
     font-family: "AvenirNextLTPro-Regular";
-       outline: none;
+    outline: none;
 }
 input:not(.mail){
       border:none;
@@ -102,12 +69,12 @@ input:not(.submit):focus{
     box-shadow: 0px 1px 0px 0px #417ea3;
 }
 
-body p{
+body p {
     text-decoration:underline;
     color:white;
     margin-top: 2.4%;
     text-align: center;
-}*/
+}
 
 /* ==========================================================================
     GENERAL STYLE
