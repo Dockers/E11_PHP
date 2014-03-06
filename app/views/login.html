@@ -1,0 +1,32 @@
+<?php require('header.html');?>
+    <body class="signin">
+        <img src="public/images/logotypo.png" class="logo_big"/>
+        <form method="post" action="connexion" id="connexionBox">
+            <input type="email" name="email" class="mail" placeholder="E-MAIL" required onclick="this.placeholder='';" onblur="this.placeholder=!this.placeholder?'E-MAIL':this.placeholder;" />
+            <input type="password" name="password" placeholder="MOT DE PASSE" required onclick="this.placeholder='';"onblur="this.placeholder=!this.placeholder?'MOT DE PASSE':this.placeholder;"/>
+            <input type="submit" class="submit" name="submit" value="CONNEXION"/>
+        </form>
+        <a href="inscription" class="inscriptionLink">    <p> Pas encore inscrit ? </p>  </a>
+        <div class="info_pop">
+             <img src="public/images/barre.png" class="barre"/>
+            <img src="public/images/i.png" class="info"/>
+            <p> Labagarre.fr a pour but de rassembler et mettre en contact tous les acteurs du monde des sports de combats.
+            </p>
+            <a href="visiteur"><button type="button">Visiter le site</button></a>
+        </div>
+
+
+        <footer>
+            <ul class="links">
+                <li><a href="#">cgu</a>&nbsp|&nbsp</li>
+                <li><a href="#">contact</a>&nbsp|&nbsp</li>
+                <li><a href="#">qui sommes nous?</a></li>
+            </ul>
+            <ul class="social">
+                <li><a href=""><i class="icon-facebook"></i></a></li>
+                <li><a href=""><i class="icon-twitter"></i></a></li>
+            </ul>
+        </footer>
+
+    </body>
+</html>

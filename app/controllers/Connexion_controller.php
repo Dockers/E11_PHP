@@ -9,7 +9,7 @@ class Connexion_controller extends controller{
   public function signin($f3){
     switch($f3->get('VERB')){
       case 'GET':
-        $this->tpl['sync']='signin.html';
+        $this->tpl['sync']='login.html';
         break;
       case 'POST':
         $auth=$this->model->signin(array(
@@ -18,7 +18,7 @@ class Connexion_controller extends controller{
           ));
         if(!$auth){
           $f3->set('error',$f3->get('loginError'));
-          $this->tpl['sync']='signin.html';
+          $this->tpl['sync']='login.html';
         }else{
           $user=array(
             'id'=>$auth->id_sportif,
@@ -49,7 +49,7 @@ class Connexion_controller extends controller{
             'prenom'=>'visiteur'
           );
           $f3->set('SESSION',$user);
-          $f3->reroute('/app/views/mainSportif.html');
+          $f3->reroute('/app/views/home.html');
   }
 
 }
