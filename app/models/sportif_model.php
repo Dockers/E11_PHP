@@ -14,6 +14,11 @@ class sportif_model extends model{
         $inscrip->save();
     }
   
+    function searchDefault(){
+        $requete = $this->mapper;
+        return $requete->find('nom_sportif like "%%" ');
+    }
+
     function searchSportifs($params) {
         $requete = $this->mapper;
         return $requete->find('nom_sportif like "%'.$params['keywords'].'%" or prenom_sportif like "%'.$params['keywords'].'%"');

@@ -53,20 +53,20 @@
                 <h4>poid</h4>
                 <div id="poid"></div>
                 <div class="poid value-wrap">
-                    <span class="value-span-1"></span>
-                    <span class="value-span-2"></span>
+                    <input type="number" class="value-span-1"></input>
+                    <input type="number" class="value-span-2"></input>
                 </div>
                 <h4>taille</h4>
                 <div id="taille"></div>
                 <div class="taille value-wrap">
-                    <span class="value-span-1"></span>
-                    <span class="value-span-2"></span>
+                    <input type="number" class="value-span-1"></input>
+                    <input type="number" class="value-span-2"></input>
                 </div>
                 <h4>distance</h4>
                 <div id="distance"></div>
                 <div class="distance value-wrap">
-                    <span class="value-span-1"></span>
-                    <span class="value-span-2"></span>
+                    <input type="number" class="value-span-1"></input>
+                    <input type="number" class="value-span-2"></input>
                 </div>
                 <h4>sport</h4>
                 <select name="sport" id="sport-select">
@@ -82,28 +82,20 @@
             </section>
             <section id="list">
                 <ul>
-                    <li class="selected">
-                        <p class="name">kimbo slice</p>
-                        <p>boxe française</p>
-                        <i class="icon-chevron_right"></i>
-                    </li>
-
-                    <li>
-                        <p class="name">kimbo slice</p>
-                        <p>boxe française</p>
-                        <i class="icon-chevron_right"></i>
-                    </li>
-                    <li>
-                        <p class="name">kimbo slice</p>
-                        <p>boxe française</p>
-                        <i class="icon-chevron_right"></i>
-                    </li>
-                    <li>
-                        <p class="name">kimbo slice</p>
-                        <p>boxe française</p>
-                        <i class="icon-chevron_right"></i>
-                    </li>
-                    <li>
+                    <?php 
+                        if(isset($sportifs)):
+                        foreach($sportifs as $sportif): 
+                    ?>
+                        <li>
+                            <p class="name"><?php echo $sportif->prenom_sportif." ".$sportif->nom_sportif; ?></p>
+                            <p><?php echo $sportif->sport_sportif ?></p>
+                            <i class="icon-chevron_right"></i>
+                        </li>
+                    <?php 
+                        endforeach; 
+                        endif;
+                    ?>
+                    <!-- <li>
                         <p class="name">kimbo slice</p>
                         <p>boxe française</p>
                         <i class="icon-chevron_right"></i>
@@ -128,6 +120,21 @@
                         <p>boxe française</p>
                         <i class="icon-chevron_right"></i>
                     </li>
+                    <li>
+                        <p class="name">kimbo slice</p>
+                        <p>boxe française</p>
+                        <i class="icon-chevron_right"></i>
+                    </li>
+                    <li>
+                        <p class="name">kimbo slice</p>
+                        <p>boxe française</p>
+                        <i class="icon-chevron_right"></i>
+                    </li>
+                    <li>
+                        <p class="name">kimbo slice</p>
+                        <p>boxe française</p>
+                        <i class="icon-chevron_right"></i>
+                    </li> -->
                 </ul>
 
             </section>

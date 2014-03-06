@@ -14,6 +14,8 @@ class sportif_controller extends controller{
 
     function searchSportifs($f3){
       $this->tpl=array('sync'=>'searchSportifs.html');
+      $f3->set('sportifs',$this->model->searchDefault());
+      $this->tpl['async']='partials/sportifs.html';
       if($f3->exists('POST.keywords')){
         $f3->set('sportifs',$this->model->searchSportifs(array('keywords'=>$f3->get('POST.keywords'))));
         $this->tpl['async']='partials/sportifs.html';
