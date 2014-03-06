@@ -26,9 +26,8 @@
 	// loader preview + animation
 	previewLoading();	
 
+	// Crée les sliders de la sidebar
     createSliders();
-	
-	
 
 	// Show or hide the overlay
 	$('footer ul li a').on('click', showPopin);
@@ -61,7 +60,6 @@
 	function contentSize() {
 		var $window = $(window);
 		$('#content').width($window.width() + 16).height($window.height() - 55);
-
 	}
 
 	function openSidebar(e) {
@@ -125,8 +123,8 @@
 			,step: 1
 			,serialization: {
 				resolution: 1
-				,to: [[$('.poid .value-span-1'), 'text'],
-				 	  [$('.poid .value-span-2'), 'text']]
+				,to: [[$('.poid .value-span-1'), 'input'],
+				 	  [$('.poid .value-span-2'), 'input']]
 			}
 		});
 		$('#taille').noUiSlider({
@@ -137,8 +135,8 @@
 			,step: 1
 			,serialization: {
 				resolution: 0.01
-				,to: [[$('.taille .value-span-1'), 'text'],
-				 	  [$('.taille .value-span-2'), 'text']]
+				,to: [[$('.taille .value-span-1'), 'input'],
+				 	  [$('.taille .value-span-2'), 'input']]
 			}
 		});
 		$('#distance').noUiSlider({
@@ -149,8 +147,8 @@
 			,step: 1
 			,serialization: {
 				resolution: 1
-				,to: [[$('.distance .value-span-1'), 'text'],
-				 	  [$('.distance .value-span-2'), 'text']]
+				,to: [[$('.distance .value-span-1'), 'input'],
+				 	  [$('.distance .value-span-2'), 'input']]
 			}
 		});
 	}

@@ -90,7 +90,7 @@ a.logo, img.logo {
     display: block;
     height: 40px;
     width: 111px;
-    background: url('../images/logo.png') no-repeat;
+    background: url('img/logo.png') no-repeat;
     position: absolute;
     top: 5px;
     left: 50%;
@@ -226,7 +226,7 @@ header.home a.logo {
    ========================================================================== */
 
 div#content {
-    background: url('../images/preview-bg.jpg') no-repeat center center;
+    background: url('img/preview-bg.jpg') no-repeat center center;
     background-position: fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -261,7 +261,7 @@ div#content {
         #sidebar .value-span-2 { float:right;}
             #sidebar .poid .value-span-1:after, #sidebar .poid .value-span-2:after { content:"Kg"; display: inline-block; vertical-align: baseline; padding-left: .1em;}
             #sidebar .distance .value-span-1:after, #sidebar .distance .value-span-2:after { content:"Km"; display: inline-block; vertical-align: baseline; padding-left: .1em;}
-        #sidebar select {width: 200px; border:none; background-color: #101010;box-shadow: none;-webkit-appearance:none;font-family: 'AvenirNextLTPro-Regular', sans-serif; font-size: .875em; color: #575757; text-transform: uppercase;padding:.5em;border-radius: 0;position: relative;margin:0 auto;background-image:url(img/chevron_down.png);background-repeat: no-repeat; background-position: center right; background-position-x: 95%;}
+        #sidebar select {width: 200px; border:none; background-color: #101010;box-shadow: none;-webkit-appearance:none;font-family: 'AvenirNextLTPro-Regular', sans-serif; font-size: .875em; color: #575757; text-transform: uppercase;padding:.5em;border-radius: 0;position: relative;margin:0 auto;background-image:url('img/chevron_down.png');background-repeat: no-repeat; background-position: center right; background-position-x: 95%;}
     section#list {
         box-sizing:border-box;
         -moz-box-sizing:border-box;
