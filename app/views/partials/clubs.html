@@ -1,0 +1,11 @@
+<h1>Clubs trouvés : </h1>
+<?php 
+if(isset($clubs)):
+foreach($clubs as $club): 
+?>
+<li><?php echo $club->nom_club." situé à ".$club->ville_club; ?>
+</li>
+<?php 
+endforeach; 
+endif;
+?>

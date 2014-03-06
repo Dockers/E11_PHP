@@ -1,0 +1,21 @@
+{
+"header":[
+<?php if(isset($header)): ?>
+  "code":"<?php echo $header['code']; ?>",
+  "status":"<?php echo $header['status']; ?>",
+  "text":"<?php echo $header['text']; ?>"
+<?php endif; ?>
+],
+"body":[
+<?php if(isset($users)): ?>
+<?php foreach($users as $user):?>
+{
+"prenom":"<?php echo $user->prenom_sportif;?>",
+"nom":"<?php echo $user->nom_sportif;?>",
+"id":"<?php echo $user->id_sportif;?>",
+"user_url":"<?php echo 'http://localhost/fatfree-master/api/users/'.$user->id_sportif; ?>"
+},
+<?php endforeach;?>
+<?php endif; ?>
+]
+}
