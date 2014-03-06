@@ -1,4 +1,77 @@
-Inscription
-  	<li><a href="formInscriptionSportif">inscription sportif</a></li>
-    <li><a href="formInscriptionEntraineur">inscription entraineur</a></li>
-    <li><a href="formInscriptionManageur">inscription manageur</a></li>
+<?php require('header.html');?>
+    <body class="inscription">
+	<img src="images/logotypo.png" class="logo_inscr"/>
+<form method="post" action="envoieformSportif" class="form_inscr">
+	<fieldset> <legend>BIENVENUE</legend>
+		   <div class="legend_subtitles">
+			<p> Pour créer votre compte , merci de remplir les informations ci-dessous</p>
+			<div class="triangle topleft"></div>
+			<div class="triangle topright"></div>
+		   </div>
+		<div class="champ">
+		 	<label for="nom">Nom</label>
+			<input type="text" name="nom_sportif" required/>
+		</div>
+		<div class="champ">
+		 	<label for="prenom">Prénom</label>
+			<input type="text" name="prenom_sportif" required/>
+		</div>
+		<div class="champ">
+			<label for="email">E-Mail</label>
+			<input type="mail" name="email_sportif" required/>
+		</div>
+		<div class="champ">
+			<label for="password">Confirmer</label>
+			<input type="text" name="password_sportif" required/>
+		</div>
+		<div class="champ">
+			<label for="password">Mot de passe</label>
+			<input type="text" name="password_sportif" required/>
+		</div>
+		<div class="champ">
+			<label for="password">Confirmer </label>
+			<input type="text" name="password_sportif" required/>
+		</div>
+		<div class="champ sexe_input">
+			<label for="sexe">Sexe</label>
+			<label for="masculin" class="sexe">Homme</label>
+				<input type="radio" name="sexe_sportif" value="1" checked>
+			<label for="feminin" class="sexe">Femme</label>
+				<input type="radio" name="sexe_sportif" value="0">
+		</div>
+		<div class="champ">
+			<label for="codepostal">Code postal</label>
+			<input name="codepostal_sportif" type="text" pattern="[0-9]*" maxlength="5" required/>
+		</div>
+		<div class="champ">
+			<label for="naissance">Date de naissance</label>
+			<input type="date" name="naissance_sportif" required/>
+	     </div>
+	     <div class="champ">
+			<label for="classe">Statut</label>
+			<select name="classe_sportif">
+				<option>Combattant</option>
+				<option>Entraineur</option>
+				<option>Manager</option>
+			</select>
+		</div>
+		<input class="submit" type="submit" name="envoi" value="Continuer">
+	</fieldset>
+	<div class="etape"> 1/2</div>
+</form>
+
+
+	<footer>
+	    <ul class="links">
+		<li><a href="#">cgu</a>&nbsp|&nbsp</li>
+		<li><a href="#">contact</a>&nbsp|&nbsp</li>
+		<li><a href="#">qui sommes nous?</a></li>
+	    </ul>
+	    <ul class="social">
+		<li><a href=""><i class="icon-facebook"></i></a></li>
+		<li><a href=""><i class="icon-twitter"></i></a></li>
+	    </ul>
+	</footer>
+
+    </body>
+</html>

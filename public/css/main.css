@@ -96,6 +96,14 @@ a.logo, img.logo {
     left: 50%;
     margin-left: -55px;
 }
+.logo_big{
+height:93px;
+width:249px;
+padding-bottom: 13px;
+display: block;
+margin:0 auto;
+margin-top: 155px;
+}
 
 header.home a.logo {
     top: 10px;
@@ -481,7 +489,6 @@ footer {
    ========================================================================== */
 /**
 
-- optimiser le style de connexion
 - importer ton taf sur inscription (pour les input background:transparent avec border-bottom (pas oublier le border:none), pour le focus : background:white !important; pour réecrire sur transparent  ||||  virer les labels et mettre des placeholder tu peux les styler avec text-transform line-height etc) ||||  Sortir le titre et sous-titre du form 
 - faire toutes les pages inscriptions part2 dans différents fichiers php en commencant par le <fieldset>
 
@@ -489,11 +496,14 @@ footer {
 
 
 /* Style page connexion ? -> */
+.signin{
+    background: url('../images/background_hand.jpg') fixed center;
+    background-position: cover;
+}
 form#connexionBox {
     display:block;
     width: 273px;
     height: 155px;
-    position: absolute;
     top: 0;left: 0;right: 0;bottom: 0;
     margin: auto;
 }
@@ -562,7 +572,204 @@ form#connexionBox {
         margin-top: 2.4%;
         text-align: center;
     }
+     .info_pop{
+        margin-top: 42px;
+        margin:0 auto;
+        display: block;
+        width:251px;
+        height: 147px;
+        background: rgba(23,23,23,0.86);
+        padding:5px 19px 5px 19px;
+        position: relative;
+        left: 10px;
+        margin-bottom: 66px;
+    }
+    .info_pop img{
+        display: block;
+        margin: 0 auto;
+    }
+    .barre{
+        position:relative;
+        top:12px;
+        left:2px;
+    }
+     .info_pop p{
+        font-size: 12px;
+        color:#bababa;
+        text-align: center;
+        font-family: 'AvenirNextLTPro-Regular';
+    }
+    .info_pop button {
+         background-color: rgb( 82, 158, 204 );
+          box-shadow: 0.5px 0.866px 1px 0px rgb( 0, 0, 0 );
+          width: 103px;
+          height: 22px;
+          font-size: 12px;
+          outline: none;
+          border:none;
+          color:white;
+          text-transform: uppercase;
+          margin:0 auto;
+          font-family: 'AvenirNextLTPro-Bold';
+          display: block;
+          margin-bottom: 8px;
+    }
 
+/* ==========================================================================
+    PAGE INSCRIPTION
+   ========================================================================== */
+    .inscription {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    position: fixed;
+    background:url('../images/bg_inscription.jpg') no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 0.75em;
+    font-family: 'AvenirNextLTPro-UltLt';
+}
+.logo_inscr{
+        width: 248px;
+        padding-top: 9px;
+        padding-bottom: 14px;
+        margin: 0 auto;
+        display: block;
+}
+.form_inscr{
+    display:block;
+    width: 547px;
+    height: 493px;
+    margin: 0 auto;
+    background: rgba(23,23,23,0.85);
+    font-size: 24px;
+    line-height: 1.25;
+    text-shadow: 0.5px 0.866px 1px rgb( 0, 0, 0 );
+}
+legend{
+    padding-left: 17px;
+    color:#4787ab;
+    font-size: 24px;
+    font-family: "AvenirNextLTPro-Regular";
+    padding-top: 15px;
+}
+.legend_subtitles{
+  background-color: rgb( 233, 233, 233 );
+  opacity: 0.8;
+  width: 577px;
+  height: 42px;
+  z-index: 61;
+  color:black;
+  font-size: 12px;
+  font-family: 'AvenirNextLTPro-UltLt';
+  position:relative;
+  left:-54px;
+  line-height: 42px;
+  margin-bottom: 21px;
+}
+.triangle{
+width: 0;
+height: 0;
+position: relative;
+display: inline-block;
+}
+.topleft{
+top: -20px;
+right: 0px;
+border-top: 17px solid #888686;
+border-left: 17px solid transparent;
+}
+.topright{
+top: -20px;
+left: 540px;
+border-top: 17px solid #888686;
+border-right: 17px solid transparent;
+}
+.legend_subtitles p {
+     padding-left: 50px;
+}
+.form_inscr fieldset{
+    border:0;
+    padding-left: 37px;
+    padding-bottom: 20px;
+}
+.form_inscr input:not([type="submit"]):not([type="date"]):not([type="radio"]){
+    width:200px;
+    height:1px;
+    background: url('../images/input.png')no-repeat center center;
+    color:#bababa;
+    font-family: "AvenirNextLTPro-Regular";
+    border:none;
+}
+
+input:focus{
+border: none;
+-moz-border: none;
+background-color: #f2f2f2;
+color: #242424;
+outline: none;
+}
+.champ{
+    display: inline-block;
+    margin-right: 50px;
+}
+label:not(.sexe){
+    display: block;
+    width:200px;
+    font-size: 12px;
+    color:#7a7979;
+    font-family: 'AvenirNextLTPro-Medium';
+    text-transform: uppercase;
+}
+.sexe{
+    font-size: 12px;
+    color:#7a7979;
+    font-family: 'AvenirNextLTPro-Medium';
+    text-transform: uppercase;
+}
+.sexe_input{
+    margin-bottom: 10px;
+}
+.submit{
+  background-color: rgb( 71, 135, 171 );
+  box-shadow: 1px 1px 0px 0px rgb( 0, 0, 0 );
+  width: 121px;
+  height: 31px;
+  text-transform: uppercase;
+  color:white;
+  margin-top: 77px;
+  border:none;
+}
+.mail{
+    border-bottom:1px solid;
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
+    border-color: #ccc;
+}
+
+.submit:active {
+    padding-top: 5px;
+    margin-bottom: -1px;
+    background-color: rgb( 71, 135, 171 );
+  box-shadow: 1px 1px 0px 0px rgb( 0, 0, 0 );
+}
+.etape {
+background-color: rgb( 187, 187, 187 );
+position: relative;
+left: 517px;
+bottom: 32px;
+width: 30px;
+height: 24px;
+display: inline-block;
+font-size: 12px;
+text-align: center;
+line-height: 24px;
+}
 /* ==========================================================================
     PAGE 404
    ========================================================================== */
