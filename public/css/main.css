@@ -667,7 +667,7 @@ form#connexionBox {
     position: relative;
 
 }
-legend{
+legend {
     padding-left: 17px;
     color:#4787ab;
     font-size: 24px;
@@ -688,22 +688,22 @@ legend{
   margin-bottom: 21px;
 }
 .triangle{
-width: 0;
-height: 0;
-position: relative;
-display: inline-block;
+    width: 0;
+    height: 0;
+    position: relative;
+    display: inline-block;
 }
 .topleft{
-top: -20px;
-right: 0px;
-border-top: 17px solid #888686;
-border-left: 17px solid transparent;
+    top: -17px;
+    right: 0px;
+    border-top: 17px solid #888686;
+    border-left: 17px solid transparent;
 }
 .topright{
-top: -20px;
-left: 540px;
-border-top: 17px solid #888686;
-border-right: 17px solid transparent;
+    top: -17px;
+    left: 540px;
+    border-top: 17px solid #888686;
+    border-right: 17px solid transparent;
 }
 .legend_subtitles p {
      padding-left: 50px;
@@ -714,12 +714,13 @@ border-right: 17px solid transparent;
     padding-bottom: 20px;
 }
 .form_inscr input:not([type="submit"]):not([type="date"]):not([type="radio"]),.add_club input:not([type="submit"]):not([type="date"]):not([type="radio"]){
-    width:200px;
-    height:1px;
-    background: url('../images/input.png')no-repeat center center;
-    color:#bababa;
-    font-family: "AvenirNextLTPro-Regular";
-    border:none;
+width: 200px;
+height: 17px;
+background: transparent;
+color: #bababa;
+font-family: "AvenirNextLTPro-Regular";
+border: none;
+border-bottom: 1px solid #bababa;
 }
 input,select{
     font-size: 12px;
@@ -737,17 +738,16 @@ input,select{
     border-radius: 0;
     position: relative;
     margin: 0 auto;
-    background-image: url(../images/chevron_down_blue.png);
+    background-image: url(img/chevron_down.png);
     background-repeat: no-repeat;
     background-position: center right;
     background-position-x: 95%;
-    margin-bottom: 30px;
 }
 input:focus{
     border: none;
     -moz-border: none;
-    background-color: #f2f2f2;
-    color: #242424;
+    background-color: #f2f2f2 !important;
+    color: #242424 !important;
     outline: none;
 }
 .champ{
@@ -755,8 +755,9 @@ input:focus{
     margin-right: 50px;
     position: relative;
     vertical-align: top;
+    margin-bottom:30px;
 }
-label:not(.radio_option){
+label:not(.bouton_radio){
     display: block;
     width:200px;
     font-size: 12px;
@@ -764,8 +765,40 @@ label:not(.radio_option){
     font-family: 'AvenirNextLTPro-Medium';
     text-transform: uppercase;
 }
-select{
-    margin-bottom: 25px;
+::-webkit-input-placeholder {
+    display: block;
+    width:200px;
+    font-size: 12px;
+    color:#7a7979;
+    font-family: 'AvenirNextLTPro-Medium';
+    text-transform: uppercase;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    display: block;
+    width:200px;
+    font-size: 12px;
+    color:#7a7979;
+    font-family: 'AvenirNextLTPro-Medium';
+    text-transform: uppercase;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    display: block;
+    width:200px;
+    font-size: 12px;
+    color:#7a7979;
+    font-family: 'AvenirNextLTPro-Medium';
+    text-transform: uppercase;  
+}
+
+:-ms-input-placeholder {  
+    display: block;
+    width:200px;
+    font-size: 12px;
+    color:#7a7979;
+    font-family: 'AvenirNextLTPro-Medium';
+    text-transform: uppercase;  
 }
 .radio_option{
     font-size: 11px;
@@ -798,7 +831,7 @@ select{
     border-color: #ccc;
 }
 .champ_video{
-    margin-top: -15px;
+    margin-top: -48px;
 }
 .etape {
     background-color: rgb( 187, 187, 187 );
@@ -818,7 +851,7 @@ select{
 }
 .add{
 right: 0px;
-bottom: 17px;
+bottom:0px;
 position: absolute;
 }
 .boxeur_list{
@@ -831,7 +864,7 @@ position: absolute;
 .boxeur_list p{
     display: inline-block;
     vertical-align: top;
-    line-height: 22px;
+    line-height: 15px;
     width: 117px;
 }
 .boxeur-input{
@@ -859,6 +892,70 @@ position: absolute;
     color:#477690;
     text-decoration: none;
 }
+/* ==========================================================================
+    POP UP AJOUT CLUB
+   ========================================================================== */
+.add_club{
+    width: 550px;
+    height: 389px;
+    background-color: #171717;
+    border-bottom: 12px solid #4787ab;
+    position: relative;
+    margin:0 auto;
+}
+
+fieldset{
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 1px;
+    padding-bottom: 13px;
+    border: none;
+}
+.ajouter {
+    color:#4787ab;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    margin-left: 30px;
+    font-family: "AvenirNextLTPro-Regular";
+}
+.champ2{
+    display: inline-block;
+    margin-right: 40px;
+    position: relative;
+}
+    .close{
+        position: absolute;
+        top:6px;
+        right: 6px;
+        display: inline-block;
+        cursor:pointer;
+    }
+    .upload{
+        margin-right: 41px;
+        margin-top:5px;
+    }
+    fieldset p:not(.completer){
+        color:#7a7979;
+        font-size:14px;
+        font-family: 'AvenirNextLTPro-Regular', sans-serif;
+    }
+    p.completer {
+        font-size: 1em;
+    }
+    .add_button{
+        position: absolute;
+        right: 60px;
+        bottom:40px;
+        width: 95px;
+        height: 32px;
+        text-transform: uppercase;
+        color:white;
+        border:none;
+        background-color: rgb( 71, 135, 171 );
+        box-shadow: 1px 1px 0px 0px rgb( 0, 0, 0 );
+        display: inline-block;
+    }
 /* ==========================================================================
     POP UP AJOUT CLUB
    ========================================================================== */

@@ -13,28 +13,22 @@
 			<div class="triangle topright"></div>
 		   </div>
 		<div class="champ">
-		 	<label for="nom">Nom</label>
-			<input type="text" name="nom_sportif" required/>
+			<input type="text" name="nom_sportif" placeholder="nom" required/>
 		</div>
 		<div class="champ">
-		 	<label for="prenom">Prénom</label>
-			<input type="text" name="prenom_sportif" required/>
+			<input type="text" name="prenom_sportif" placeholder="prenom"required/>
 		</div>
 		<div class="champ">
-			<label for="email">E-Mail</label>
-			<input type="mail" name="email_sportif" required/>
+			<input type="mail" name="email_sportif" placeholder="mail" required/>
 		</div>
 		<div class="champ">
-			<label for="confirm_email">Confirmer</label>
-			<input type="mail" name="confirm_email" required/>
+			<input type="mail" name="confirm_email" placeholder="confirmer" required/>
 		</div>
 		<div class="champ">
-			<label for="password">Mot de passe</label>
-			<input type="password" name="password_sportif" required/>
+			<input type="password" name="password_sportif" placeholder="Mot de passe" required/>
 		</div>
 		<div class="champ">
-			<label for="confirmer">Confirmer </label>
-			<input type="password" name="confirm_password_sportif" required/>
+			<input type="password" name="confirm_password_sportif" required placeholder="confirmer"/>
 		</div>
 		<div class="champ sexe_input">
 			<label for="sexe">Sexe</label>
@@ -44,8 +38,7 @@
 				<input type="radio" name="sexe_sportif" value="0">
 		</div>
 		<div class="champ">
-			<label for="codepostal">Code postal</label>
-			<input name="codepostal_sportif" type="text" pattern="[0-9]*" maxlength="5" required/>
+			<input name="codepostal_sportif" placeholder="code postal" type="text" pattern="[0-9]*" maxlength="5" required/>
 		</div>
 		<div class="champ">
 			<label for="naissance">Date de naissance</label>
@@ -92,21 +85,17 @@
 			</select>
 		</div>
 		<div class="champ">
-		 	<label for="nom">Poids</label>
-			<input type="text" name="nom_sportif" required/>
+			<input type="text" name="poids" placeholder="poids" required/>
 		</div>
 		<div class="champ">
-		 	<label for="prenom">Taille</label>
-			<input type="text" name="prenom_sportif" required/>
+			<input type="text" name="taille" placeholder="taille" required/>
 		</div>
 		<div class="champ">
-			<label for="email">Club</label>
-			<input type="mail" name="email_sportif" required/>
+			<input type="text" name="club_sportif" placeholder="club" required/>
 			<img src="public/images/+.png" class="add"/>
 		</div>
 		<div class="champ">
-			<label for="password">Palmares</label>
-			<input type="text" name="password_sportif" required/>
+			<input type="text" name="password_sportif" placeholder="palmares" required/>
 			<img src="public/images/+.png" class="add"/>
 		</div>
 		<div class="champ sexe_input">
@@ -184,13 +173,11 @@
 			</select>
 		</div>
 		<div class="champ">
-			<label for="email">Club</label>
-			<input type="mail" name="email_sportif" required/>
+			<input type="text" name="club" placeholder="club" required/>
 			<img src="public/images/+.png" class="add"/>
 		</div>
 		<div class="champ">
-			<label for="password">Palmares</label>
-			<input type="text" name="password_sportif" required/>
+			<input type="text" name="palmares" placeholder="palmares" required/>
 			<img src="public/images/+.png" class="add"/>
 		</div>
 		<div class="champ">
@@ -198,7 +185,7 @@
 			<img src="public/images/entraineur_miniature.png" class="photo"/>
 			<img src="public/images/entraineur_miniature.png" class="photo"/>
 			<img src="public/images/entraineur_miniature.png" class="photo"/>
-			<img src="public/images/+.png" class="add"/>
+			<img src="public/images/+.png"/>
 		</div>
 	    <div class="champ boxeur_list">
 			<label for="boxeurs">Mes boxeurs</label>
@@ -216,8 +203,7 @@
 			</div>
 		</div>
 		<div class="champ champ_video">
-			<label for="video">Mes videos</label>
-			<input type="text" name="video" required/>
+			<input type="text" name="video" required placeholder="Mes vidéos"/>
 			<img src="public/images/+.png" class="add"/>		
 		</div>
 
@@ -259,7 +245,7 @@
 			<img src="public/images/entraineur_miniature.png" class="photo"/>
 			<img src="public/images/entraineur_miniature.png" class="photo"/>
 			<img src="public/images/entraineur_miniature.png" class="photo"/>
-			<img src="public/images/+.png" class="add"/>	
+			<img src="public/images/+.png"/>	
 		</div>
 
 		<input class="valid" type="submit" name="envoi" value="INSCRIPTION">
@@ -279,24 +265,19 @@
 	<fieldset>
 	<p> Veuillez renseigner l’adresse mail et le mot de passe qui vous serviront à administer cette page club. </p>
 	<div class="champ2">
-		<label for="email">E-Mail</label>
-		<input type="mail" name="email_sportif" required/>
+		<input type="mail" name="email_sportif" placeholder="email" required/>
 	</div>
 	<div class="champ2">
-		<label for="password_club">Mot de passe</label>
-		<input type="text" name="password_club" required/>
+		<input type="text" name="password_club" placeholder="message" required/>
 	</div>
 	<div class="champ2">
-		<label for="nom_club">Nom du club</label>
-		<input type="text" name="nom_club" required/>
+		<input type="text" name="nom_club" placeholder="nom du club" required/>
 		</div>
 	<div class="champ2">
-		<label for="annee">Annee de creation </label>
-		<input type="text" name="annee" required/>
+		<input type="text" name="annee" placeholder="annee de creation"required/>
 	</div>
 	<div class="champ2">
-		<label for="ville">Ville</label>
-		<input type="text" name="ville" required/>
+		<input type="text" name="ville" placeholder="ville" required/>
 	</div>
 	<div class="champ2">
 		<label for="sport">Sport</label>
@@ -332,4 +313,3 @@
 
     </body>
 </html>
-w
