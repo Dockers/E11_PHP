@@ -511,8 +511,9 @@ footer {
 
 **/
 .signin{
-    background: url('../images/background_hand.jpg') fixed center;
-    background-position: cover;
+    background: url('../images/background_hand.jpg') fixed center center;
+    background-size: cover;
+    -moz-background-size: cover;
 }
 form#connexionBox {
     display:block;

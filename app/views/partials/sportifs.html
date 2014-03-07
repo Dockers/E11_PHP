@@ -3,9 +3,11 @@
     foreach($sportifs as $sportif): 
 ?>
     <li>
-        <p class="name"><?php echo $sportif->prenom_sportif." ".$sportif->nom_sportif; ?></p>
-        <p><?php echo $sportif->sport_sportif ?></p>
-        <i class="icon-chevron_right"></i>
+    	<a href="searchSportif/<?php echo $sportif->id_sportif; ?>" style="text-decoration:none;color:#ababab;">
+        	<p class="name"><?php echo $sportif->prenom_sportif." ".$sportif->nom_sportif; ?></p>
+        	<p><?php echo $sportif->sport_sportif ?></p>
+        	<i class="icon-chevron_right"></i>
+    	</a>
     </li>
 <?php 
     endforeach; 

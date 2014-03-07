@@ -41,7 +41,21 @@ class sportif_controller extends controller{
       }
     }
 
+    function searchSportif($f3){
+      $this->tpl=array('sync'=>'searchSportifs.html');
+      $f3->set('sportif',$this->model->searchSportif(
+        array(
+          'id'=>$f3->get('PARAMS.id'))
+        ));
+      $this->tpl['async']='partials/preview.php';
+    }
+
     function unSportif($f3){
+      $this->tpl=array('sync'=>'searchSportifs.html');
+      $f3->set('sportif',$this->model->searchSportif(
+        array(
+          'id'=>$f3->get('PARAMS.id'))
+        ));
       $this->tpl['sync']='ficheSportif.html';
     }
 

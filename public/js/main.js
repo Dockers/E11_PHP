@@ -118,6 +118,19 @@
 		TweenLite.to(previewContent, 0.4, {opacity:1,ease:Power1.easeInOut,delay:1.5});
 	}
 
+		// Function pour afficher les infos sup sur la page Connexion
+	function connexionPopin() {
+		var trigger = $('body.signin i.icon-information_black'),
+			popin = $('.info_pop');
+
+		trigger.toggle(300);
+		popin.fadeToggle(300);
+	}
+	function closePopinConnexion() {
+		$(this).parent('.info_pop').fadeOut(300);
+		$('body.signin i.icon-information_black').show();
+	}
+
 	// initialise les sliders de la sidebar
 	function createSliders() {
 		$('#poid').noUiSlider({
@@ -158,18 +171,6 @@
 		});
 	}
 
-	// Function pour afficher les infos sup sur la page Connexion
-	function connexionPopin() {
-		var trigger = $('body.signin i.icon-information_black'),
-			trigger2 = $('.info_wrap i'),
-			popin = $('.info_pop');
 
-		trigger.toggle(300);
-		popin.fadeToggle(300);
-	}
-	function closePopinConnexion() {
-		$(this).parent('.info_pop').fadeOut(300);
-		$('body.signin i.icon-information_black').show();
-	}
 
 });

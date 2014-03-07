@@ -24,5 +24,10 @@ class sportif_model extends model{
         return $requete->find('poids_sportif between '.$params['poids_min'].' and '.$params['poids_max'].' && taille_sportif between '.$params['taille_min'].' and '.$params['taille_max'].' && sport_sportif="'.$params['sport'].'";');
     }
 
+    function searchSportif($params){
+        $requete = $this->mapper;
+        return $requete->load('id_sportif ='.$params['id']);
+    }
+    
 }
 ?>

@@ -48,7 +48,7 @@
             </div>
             <section id="sidebar" class="close">
                 <div class="profil-sidebar">
-                    <h3>Muhamad Ali</h3>
+                    <h3>nom prenom</h3>
                     <img src="public/images/sidebar-profil.png" alt="" class="profil-pic">
                     <span class="linksWrap">
                         <a href="profil">mon profil &nbsp|&nbsp</a>
@@ -98,19 +98,7 @@
 
             </section>
             <section id="preview">
-                <div class="wrap">
-                    <img src="public/images/profile-pic.png" alt="{name}" class="profil">
-                    <div class="infos">
-                        <h2>Kimbo Slice</h2>
-                        <p class="label">sports</p>
-                        <p>boxe française, full contact</p>
-                        <p class="label">mensurations</p>
-                        <p>97 kg - 1,72m</p>
-                        <p class="label">ville</p>
-                        <p>Bagnolet(93) - Île de France</p>
-                    </div>
-                    <a href="ficheSportif" class="btn">voir la fiche complète &nbsp&nbsp&nbsp<i class="icon-chevron_right"></i></a>
-                </div>
+                <?php require('partials/preview.php'); ?>
             </section>
         </div>
 
@@ -132,11 +120,5 @@
         <script src="public/js/plugins.js"></script>
         <script src="public/js/vendor/jquery.nouislider.js"></script>
         <script src="public/js/main.js"></script>
-        <script>
-        $(function() {
-            // Create sliders for the sidebar
-            createSliders();
-        });
-        </script>
     </body>
 </html>

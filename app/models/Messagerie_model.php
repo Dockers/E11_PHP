@@ -1,5 +1,5 @@
 <?php
-class entraineur_model extends model{
+class Messagerie_model extends model{
     
     private $mapper;
 
