@@ -37,16 +37,20 @@
 
     function hoverHome() {
         var _this = $(this),
-        	video = _this.find('video'),
-        	videoWrap = video.parent('.video-container');
+        	// video = _this.find('video'),
+        	titleWrap = _this.find('.title-wrap'),
+        	videoWrap = $('.video-container');
         videoWrap.css('opacity', '1');
-        video[0].play();
-        _this.removeClass('bgOn');	
+        //video[0].play();
+        //_this.removeClass('bgOn');	
+        console.log(titleWrap);
+        titleWrap.addClass('black');
 
         _this.on("mouseout", function(){
-        	video[0].pause();
-        	_this.addClass('bgOn');	
+        	//video[0].pause();
+        	//_this.addClass('bgOn');	
         	videoWrap.css('opacity', '0');
+        	titleWrap.removeClass('black');
         });
     }
 
@@ -128,13 +132,13 @@
 			}
 		});
 		$('#taille').noUiSlider({
-			 range: [1.5,2.2]
-			,start: [1.8,1.9]
+			 range: [150,220]
+			,start: [180,190]
 			,handles: 2
 			,connect: true
 			,step: 1
 			,serialization: {
-				resolution: 0.01
+				resolution: 1
 				,to: [[$('.taille .value-span-1'), 'input'],
 				 	  [$('.taille .value-span-2'), 'input']]
 			}

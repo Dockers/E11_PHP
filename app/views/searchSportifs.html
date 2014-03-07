@@ -31,7 +31,6 @@
 
         <div id="overlay">
             <div id="popin">
-                <h3>Hello I'm a Pop-in</h3>
                 <a href="#" class="closePopin"><i class="icon-cross_mark"></i></a>
             </div>
         </div>
@@ -48,25 +47,34 @@
                 </div>
             </div>
             <section id="sidebar" class="close">
-                <form action="searchSportifs" method="post">
-                <h1>Hello I'm a sidebar</h1>
-                <h4>poid</h4>
+                <div class="profil-sidebar">
+                    <h3>Muhamad Ali</h3>
+                    <img src="public/images/sidebar-profil.png" alt="" class="profil-pic">
+                    <span class="linksWrap">
+                        <a href="profil">mon profil &nbsp|&nbsp</a>
+                        <a href="deconnexion">deconnexion</a>
+                    </span>
+                </div>
+                <input type="search" name="googlesearch" placeholder="rechercher"></input>
+                <i class="icon-magnifying"></i>
+                <form action="searchSportifs" method="post">    
+                <h4>poid <span>(en Kg)</span></h4>
                 <div id="poid"></div>
                 <div class="poid value-wrap">
-                    <input type="number" class="value-span-1" name="poids_min"></input>
-                    <input type="number" class="value-span-2" name="poids_max"></input>
+                    <input type="number" value="" class="value-span-1" name="poids_min"></input>
+                    <input type="number" value="" class="value-span-2" name="poids_max"></input>
                 </div>
-                <h4>taille</h4>
+                <h4>taille <span>(en cm)</span></h4>
                 <div id="taille"></div>
                 <div class="taille value-wrap">
-                    <input type="number" class="value-span-1" name="taille_min"></input>
-                    <input type="number" class="value-span-2" name="taille_max"></input>
+                    <input type="number" value="" class="value-span-1" name="taille_min"></input>
+                    <input type="number" value="" class="value-span-2" name="taille_max"></input>
                 </div>
-                <h4>distance</h4>
+                <h4>distance <span>(en Km)</span></h4>
                 <div id="distance"></div>
                 <div class="distance value-wrap">
-                    <input type="number" class="value-span-1" name="distance_min"></input>
-                    <input type="number" class="value-span-2" name="distance_max"></input>
+                    <input type="number" value="" class="value-span-1" name="distance_min"></input>
+                    <input type="number" value="" class="value-span-2" name="distance_max"></input>
                 </div>
                 <h4>sport</h4>
                 <select name="sport" id="sport-select">
@@ -78,7 +86,7 @@
                     <option value="Judo">Judo</option>
                     <option value="Karate">Karate</option>
                 </select>
-                <input type="submit" value="Envoyer">
+                <input type="submit" value="Envoyer" class="valid">
                 </form>
             </section>
             <section id="list">

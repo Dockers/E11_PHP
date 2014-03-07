@@ -90,7 +90,7 @@ a.logo, img.logo {
     display: block;
     height: 40px;
     width: 111px;
-    background: url('../images/logo.png') no-repeat;
+    background: url('img/logo.png') no-repeat;
     position: absolute;
     top: 5px;
     left: 50%;
@@ -102,7 +102,7 @@ a.logo, img.logo {
     padding-bottom: 50px;
     display: block;
     margin: 0 auto;
-    margin-top: 130px;
+    margin-top: 60px;
 }
 
 header.home a.logo {
@@ -146,7 +146,14 @@ header.home a.logo {
     height:100%;
     width: 100%;
     position:relative;
+        -webkit-transform: background .3s ease;
+          -moz-transition: background .3s ease;
+            -o-transition: background .3s ease;
+               transition: background .3s ease;
 }
+    .title-wrap.black {
+        background: rgba(0,0,0,.5);
+    }
     .title {
         opacity:0;
         z-index: 49;
@@ -226,7 +233,7 @@ header.home a.logo {
    ========================================================================== */
 
 div#content {
-    background: url('../images/preview-bg.jpg') no-repeat center center;
+    background: url('img/preview-bg.jpg') no-repeat center center;
     background-position: fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -254,14 +261,24 @@ div#content {
     section#sidebar { position: absolute; z-index: 99; display: inline-block; width: 33.3%; left: -33.3%; height: 100%; background-color: #171717;
         box-sizing: border-box; -moz-box-sizing: border-box; padding-left: 50px; padding-right: 50px;}
         #sidebar h4 {font-family: 'AvenirNextLTPro-Regular', sans-serif; font-size: .875em; color: #ababab; text-transform: uppercase;}
+        #sidebar h4 span {opacity: .2;}
+        #sidebar .profil-sidebar {position: relative; margin-top: 20px; height: 50px;}
+        #sidebar h3 {margin: 0;float:right; margin-right: 50px; margin-top: 5px;font-family: 'AvenirNextLTPro-Demi', sans-serif; display: inline-block; font-size: .875em; color: #4787ab; text-transform: uppercase;}
+        #sidebar .profil-pic {position: absolute; right: 0; top: 0;width: 40px; height: 40px; border-radius: 100%; border: 1px solid white; display: block; float: right;}
+        #sidebar .profil-sidebar .linksWrap { float: right; clear: both; margin-right: 50px;  } 
+        #sidebar .profil-sidebar .linksWrap a {font-family: 'AvenirNextLTPro-Regular' sans-serif ; font-size: .65em ; color: #ababab !important;text-transform: uppercase; text-decoration: none;}
         #sidebar .value-wrap { overflow: auto; display: block; margin: 0 auto; }
-        #sidebar .value-wrap input { font-family: 'AvenirNextLTPro-Regular' sans-serif; font-size: .65em; color: #4787ab;margin: 10px auto; display: inline-block; vertical-align: top; color: white; background-color: transparent; border: none;}
-
+        #sidebar .value-wrap input[type='number'] { width: 30px; font-family: 'AvenirNextLTPro-Regular' sans-serif !important; font-size: .65em !important; color: #4787ab !important; margin: 10px auto; display: inline-block; vertical-align: top; color: white; background-color: transparent; border: none;}
         #sidebar .value-span-1 { float:left;}
         #sidebar .value-span-2 { float:right;}
             #sidebar .poid .value-span-1:after, #sidebar .poid .value-span-2:after { content:"Kg"; display: inline-block; vertical-align: baseline; padding-left: .1em;}
             #sidebar .distance .value-span-1:after, #sidebar .distance .value-span-2:after { content:"Km"; display: inline-block; vertical-align: baseline; padding-left: .1em;}
         #sidebar select {width: 200px; border:none; background-color: #101010;box-shadow: none;-webkit-appearance:none;font-family: 'AvenirNextLTPro-Regular', sans-serif; font-size: .875em; color: #575757; text-transform: uppercase;padding:.5em;border-radius: 0;position: relative;margin:0 auto;background-image:url(img/chevron_down.png);background-repeat: no-repeat; background-position: center right; background-position-x: 95%;}
+        #sidebar form {position: relative;}
+        #sidebar .valid {top: 110%; left: 0;}
+        #sidebar input[type="search"] {font-family: 'AvenirNextLTPro-Demi', sans-serif;height: 30px;line-height:30px;display:block; width: 80%; border:none; background:transparent; border-bottom: 1px solid #ababab; text-transform: uppercase;margin: 30px auto 30px;}
+        #sidebar .icon-magnifying {position: absolute;color: #ababab;top: 105px; left:283px;}
+        #sidebar input[type="search"]:focus {background: #F2F2F2; color: #333;}
     section#list {
         box-sizing:border-box;
         -moz-box-sizing:border-box;
@@ -837,7 +854,7 @@ position: absolute;
     line-height: 22px;
     width: 117px;
 }
-.boxeur{
+.boxeur-input{
     width:163px;
     height: 37px;
     background: #f7f7f7;
