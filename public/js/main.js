@@ -129,8 +129,8 @@
 			,step: 1
 			,serialization: {
 				resolution: 1
-				,to: [[$('.poid .value-span-1'), 'text'],
-				 	  [$('.poid .value-span-2'), 'text']]
+				,to: [[$('.poid .value-span-1'), 'input'],
+				 	  [$('.poid .value-span-2'), 'input']]
 			}
 		});
 		$('#taille').noUiSlider({
@@ -153,8 +153,8 @@
 			,step: 1
 			,serialization: {
 				resolution: 1
-				,to: [[$('.distance .value-span-1'), 'text'],
-				 	  [$('.distance .value-span-2'), 'text']]
+				,to: [[$('.distance .value-span-1'), 'input'],
+				 	  [$('.distance .value-span-2'), 'input']]
 			}
 		});
 	}

@@ -97,21 +97,12 @@ a.logo, img.logo {
     margin-left: -55px;
 }
 .logo_big{
-<<<<<<< HEAD
     height: 90px;
     width: 250px;
     padding-bottom: 50px;
     display: block;
     margin: 0 auto;
     margin-top: 60px;
-=======
-height:93px;
-width:249px;
-padding-bottom: 13px;
-display: block;
-margin:0 auto;
-margin-top: 155px;
->>>>>>> FETCH_HEAD
 }
 
 header.home a.logo {
