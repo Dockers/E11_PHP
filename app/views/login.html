@@ -6,13 +6,16 @@
             <input type="password" name="password" placeholder="MOT DE PASSE" required onclick="this.placeholder='';"onblur="this.placeholder=!this.placeholder?'MOT DE PASSE':this.placeholder;"/>
             <input type="submit" class="submit" name="submit" value="CONNEXION"/>
         </form>
-        <a href="inscription" class="inscriptionLink">    <p> Pas encore inscrit ? </p>  </a>
-        <div class="info_pop">
-             <img src="public/images/barre.png" class="barre"/>
-            <img src="public/images/i.png" class="info"/>
-            <p> Labagarre.fr a pour but de rassembler et mettre en contact tous les acteurs du monde des sports de combats.
-            </p>
-            <a href="visiteur"><button type="button">Visiter le site</button></a>
+        <a href="inscription" class="inscriptionLink"><p> Pas encore inscrit ?</p></a>
+        <div class="info-wrap">
+            <i class='icon-information_black'></i>
+            <div class="info_pop">
+                <i class="icon-cancel_circle"></i>
+                <img src="public/images/barre.png" class="barre"/>
+                <p>Labagarre.fr a pour but de rassembler et mettre en contact tous les acteurs du monde des sports de combats.
+                </p>
+                <a href="visiteur"><button type="button">Visiter le site</button></a>
+            </div>
         </div>
 
 
@@ -27,6 +30,12 @@
                 <li><a href=""><i class="icon-twitter"></i></a></li>
             </ul>
         </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="public/js/plugins.js"></script>
+        <script src="public/js/main.js"></script>
 
     </body>
 </html>
