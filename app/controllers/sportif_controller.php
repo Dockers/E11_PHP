@@ -42,7 +42,7 @@ class sportif_controller extends controller{
     }
 
     function unSportif($f3){
-      $this->tpl['sync']='fiche-boxeur.html';
+      $this->tpl['sync']='ficheSportif.html';
     }
 
 }
