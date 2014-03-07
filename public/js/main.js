@@ -5,9 +5,6 @@
 
 	// Trigger video animation on homepage 
     $('.section').on("mouseenter", hoverHome);
-    
-    // liens sur la home
-    // $('#content.homeContent .section').on('click', linksHome);
 
 	// set overlay to hidden
 	TweenLite.set(overlay, {opacity:0,display:'none'});
@@ -26,9 +23,12 @@
 	// loader preview + animation
 	previewLoading();	
 
+	// Crée les sliders de la sidebar
     createSliders();
 	
-	
+	// Pop-in d'information sur la home
+    $('body.signin i.icon-information_black').on('click', connexionPopin);
+    $('body.signin').on('click', 'i.icon-cancel_circle', closePopinConnexion);
 
 	// Show or hide the overlay
 	$('footer ul li a').on('click', showPopin);
@@ -54,12 +54,6 @@
         });
     }
 
-    // fonction pour rediriger vers la bonne page depuis la home
-  //   function linksHome() {
-  //   	var _this = $(this);
-  //   	var url = _this.attr('id') + '.html';
-		// window.location = url;
-  //   }
 
 	// function to set #content size to window size - header
 	function contentSize() {
@@ -68,6 +62,7 @@
 
 	}
 
+	// fonction pour ouvrir la sidebar
 	function openSidebar(e) {
 		e.preventDefault();
 		if(sidebar.hasClass('close')) {
@@ -83,6 +78,7 @@
 		}
 	}
 
+	// Animation d'intro pour la page SearchSportifs
 	function animateList() {
 		var item = $('#list ul li');
 		TweenLite.set(item, {transform:"translateX(-50px) translateY(-20px)", opacity:0});
@@ -90,6 +86,7 @@
 			{transform:"translateX(0px) translateY(0px)",opacity:1}, 0.15);
 	}
 
+	// popin du footer
 	function showPopin(e) {
 		e.preventDefault();
 		TweenLite.to(overlay, 0.3, {opacity:1,display:'block',ease:Power4.easeInOut});
@@ -112,6 +109,7 @@
 		TweenLite.to(overlay, 0.3, {opacity:0,display:'none',ease:Power4.easeInOut});
 	}
 
+	// loader pour les pages search
 	function previewLoading() {
 		var previewContent = $('#preview .wrap'),
 			loader = $('#content .loading-wrap');
@@ -120,6 +118,7 @@
 		TweenLite.to(previewContent, 0.4, {opacity:1,ease:Power1.easeInOut,delay:1.5});
 	}
 
+	// initialise les sliders de la sidebar
 	function createSliders() {
 		$('#poid').noUiSlider({
 			 range: [60,120]
@@ -159,6 +158,18 @@
 		});
 	}
 
+	// Function pour afficher les infos sup sur la page Connexion
+	function connexionPopin() {
+		var trigger = $('body.signin i.icon-information_black'),
+			trigger2 = $('.info_wrap i'),
+			popin = $('.info_pop');
 
+		trigger.toggle(300);
+		popin.fadeToggle(300);
+	}
+	function closePopinConnexion() {
+		$(this).parent('.info_pop').fadeOut(300);
+		$('body.signin i.icon-information_black').show();
+	}
 
 });
