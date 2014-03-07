@@ -7,7 +7,12 @@ class sportif_controller extends controller{
     $this->tpl=array('sync'=>'home.html');
   }
 
-  function home(){} 
+  function home($f3){
+    $session=$f3->get('SESSION.id');
+    if(!$session){
+      $f3->reroute('/connexion');
+    }
+  }
   
 
     function inscriptionSportif($f3){
@@ -34,6 +39,10 @@ class sportif_controller extends controller{
           ));
         $this->tpl['async']='partials/sportifs.html';
       }
+    }
+
+    function unSportif($f3){
+      $this->tpl['sync']='fiche-boxeur.html';
     }
 
 }
