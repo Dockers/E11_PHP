@@ -4,12 +4,16 @@ class sportif_controller extends controller{
     
   public function __construct(){
     parent::__construct();
+    $this->tpl=array('sync'=>'home.html');
   }
 
+  function home(){} 
+  
+
     function inscriptionSportif($f3){
-      echo View::instance()->render('inscriptionSportif.html');
+      // echo View::instance()->render('inscriptionSportif.html');
       $f3->set('inscriptionSportif',$this->model->inscriptionSportif());
-      echo View::instance()->render('home.html');
+      // echo View::instance()->render('home.html');
     }
 
     function searchSportifs($f3){

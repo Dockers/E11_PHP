@@ -26,7 +26,7 @@ class Connexion_controller extends controller{
             'prenom'=>$auth->prenom_sportif
           );
           $f3->set('SESSION',$user);
-          $f3->reroute('/app/views/home.html');
+          $f3->reroute('/');
         }
       break;
       }
@@ -46,7 +46,7 @@ class Connexion_controller extends controller{
     $auth=$this->model->visiteur();
     if(!$auth){
           $f3->set('error',$f3->get('loginError'));
-          $this->tpl['sync']='login.html';
+          $this->tpl['sync']='inscription.html';
     }else{
     $user=array(
             'id'=>$auth->id_sportif,
@@ -54,7 +54,7 @@ class Connexion_controller extends controller{
             'prenom'=>$auth->prenom_sportif
           );
     $f3->set('SESSION',$user);
-    $f3->reroute('/app/views/home.html');
+    $f3->reroute('/');
     }
   }
 
