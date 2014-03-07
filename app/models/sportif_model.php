@@ -21,7 +21,7 @@ class sportif_model extends model{
 
     function searchSportifs($params) {
         $requete = $this->mapper;
-        return $requete->find('nom_sportif like "%'.$params['keywords'].'%" or prenom_sportif like "%'.$params['keywords'].'%"');
+        return $requete->find('poids_sportif between '.$params['poids_min'].' and '.$params['poids_max'].' && taille_sportif between '.$params['taille_min'].' and '.$params['taille_max'].' && sport_sportif="'.$params['sport'].'";');
     }
 
 }

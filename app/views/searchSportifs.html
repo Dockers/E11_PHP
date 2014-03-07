@@ -53,47 +53,38 @@
                 <h4>poid</h4>
                 <div id="poid"></div>
                 <div class="poid value-wrap">
-                    <input type="number" class="value-span-1"></input>
-                    <input type="number" class="value-span-2"></input>
+                    <input type="number" class="value-span-1" name="poids_min"></input>
+                    <input type="number" class="value-span-2" name="poids_max"></input>
                 </div>
                 <h4>taille</h4>
                 <div id="taille"></div>
                 <div class="taille value-wrap">
-                    <input type="number" class="value-span-1"></input>
-                    <input type="number" class="value-span-2"></input>
+                    <input type="number" class="value-span-1" name="taille_min"></input>
+                    <input type="number" class="value-span-2" name="taille_max"></input>
                 </div>
                 <h4>distance</h4>
                 <div id="distance"></div>
                 <div class="distance value-wrap">
-                    <input type="number" class="value-span-1"></input>
-                    <input type="number" class="value-span-2"></input>
+                    <input type="number" class="value-span-1" name="distance_min"></input>
+                    <input type="number" class="value-span-2" name="distance_max"></input>
                 </div>
                 <h4>sport</h4>
                 <select name="sport" id="sport-select">
                     <i class="icon-chevron_down"></i>
-                    <option value="1">Boxe</option>
-                    <option value="2">Boxe Française</option>
-                    <option value="3">Full Contact</option>
-                    <option value="4">Aïkido</option>
-                    <option value="5">Judo</option>
-                    <option value="6">Karate</option>
+                    <option value="Boxe">Boxe</option>
+                    <option value="Boxe Française">Boxe Française</option>
+                    <option value="Full Contact">Full Contact</option>
+                    <option value="Aïkido">Aïkido</option>
+                    <option value="Judo">Judo</option>
+                    <option value="Karate">Karate</option>
                 </select>
+                <input type="submit" value="Envoyer">
                 </form>
             </section>
             <section id="list">
                 <ul>
                     <?php 
-                        if(isset($sportifs)):
-                        foreach($sportifs as $sportif): 
-                    ?>
-                        <li>
-                            <p class="name"><?php echo $sportif->prenom_sportif." ".$sportif->nom_sportif; ?></p>
-                            <p><?php echo $sportif->sport_sportif ?></p>
-                            <i class="icon-chevron_right"></i>
-                        </li>
-                    <?php 
-                        endforeach; 
-                        endif;
+                       require('partials/sportifs.html');
                     ?>
                     <!-- <li>
                         <p class="name">kimbo slice</p>

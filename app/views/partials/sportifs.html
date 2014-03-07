@@ -1,11 +1,13 @@
-<h1>Sportifs trouvés : </h1>
 <?php 
-if(isset($sportifs)):
-foreach($sportifs as $sportif): 
+    if(isset($sportifs)):
+    foreach($sportifs as $sportif): 
 ?>
-<li><?php echo $sportif->prenom_sportif." - ".$sportif->nom_sportif; ?>
-</li>
+    <li>
+        <p class="name"><?php echo $sportif->prenom_sportif." ".$sportif->nom_sportif; ?></p>
+        <p><?php echo $sportif->sport_sportif ?></p>
+        <i class="icon-chevron_right"></i>
+    </li>
 <?php 
-endforeach; 
-endif;
+    endforeach; 
+    endif;
 ?>

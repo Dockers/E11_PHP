@@ -48,8 +48,8 @@ class Connexion_controller extends controller{
             'nom'=>'visiteur',
             'prenom'=>'visiteur'
           );
-          $f3->set('SESSION',$user);
-          $f3->reroute('/app/views/home.html');
+    $f3->set('SESSION',$user);
+    $f3->reroute('/app/views/home.html');
   }
 
 }
