@@ -614,7 +614,6 @@ form#connexionBox {
           display: block;
           margin-bottom: 8px;
     }
-
 /* ==========================================================================
     PAGE INSCRIPTION
    ========================================================================== */
@@ -648,7 +647,8 @@ form#connexionBox {
     background: rgba(23,23,23,0.85);
     font-size: 24px;
     line-height: 1.25;
-    text-shadow: 0.5px 0.866px 1px rgb( 0, 0, 0 );
+    position: relative;
+
 }
 legend{
     padding-left: 17px;
@@ -665,7 +665,6 @@ legend{
   z-index: 61;
   color:black;
   font-size: 12px;
-  font-family: 'AvenirNextLTPro-UltLt';
   position:relative;
   left:-54px;
   line-height: 42px;
@@ -697,7 +696,7 @@ border-right: 17px solid transparent;
     padding-left: 37px;
     padding-bottom: 20px;
 }
-.form_inscr input:not([type="submit"]):not([type="date"]):not([type="radio"]){
+.form_inscr input:not([type="submit"]):not([type="date"]):not([type="radio"]),.add_club input:not([type="submit"]):not([type="date"]):not([type="radio"]){
     width:200px;
     height:1px;
     background: url('../images/input.png')no-repeat center center;
@@ -705,19 +704,42 @@ border-right: 17px solid transparent;
     font-family: "AvenirNextLTPro-Regular";
     border:none;
 }
-
+input,select{
+    font-size: 12px;
+}
+.select_custom{
+    width: 202px;
+    height: 38px;
+    border: none;
+    background-color: #f7f7f7;
+    box-shadow: none;
+    -webkit-appearance: none;
+    color: #7a7979;
+    text-transform: uppercase;
+    padding: .5em;
+    border-radius: 0;
+    position: relative;
+    margin: 0 auto;
+    background-image: url(../images/chevron_down_blue.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-position-x: 95%;
+    margin-bottom: 30px;
+}
 input:focus{
-border: none;
--moz-border: none;
-background-color: #f2f2f2;
-color: #242424;
-outline: none;
+    border: none;
+    -moz-border: none;
+    background-color: #f2f2f2;
+    color: #242424;
+    outline: none;
 }
 .champ{
     display: inline-block;
     margin-right: 50px;
+    position: relative;
+    vertical-align: top;
 }
-label:not(.sexe){
+label:not(.radio_option){
     display: block;
     width:200px;
     font-size: 12px;
@@ -725,25 +747,32 @@ label:not(.sexe){
     font-family: 'AvenirNextLTPro-Medium';
     text-transform: uppercase;
 }
-.sexe{
-    font-size: 12px;
+select{
+    margin-bottom: 25px;
+}
+.radio_option{
+    font-size: 11px;
     color:#7a7979;
     font-family: 'AvenirNextLTPro-Medium';
-    text-transform: uppercase;
 }
 .sexe_input{
     margin-bottom: 10px;
 }
-.submit{
+.valid{
   background-color: rgb( 71, 135, 171 );
   box-shadow: 1px 1px 0px 0px rgb( 0, 0, 0 );
   width: 121px;
   height: 31px;
   text-transform: uppercase;
   color:white;
-  margin-top: 77px;
   border:none;
+  display: inline-block;
+  margin-right: 15px;
+  bottom: 19px;
+  left: 35px;
+  position:absolute;
 }
+
 .mail{
     border-bottom:1px solid;
     border-top:0px;
@@ -751,25 +780,129 @@ label:not(.sexe){
     border-right:0px;
     border-color: #ccc;
 }
-
-.submit:active {
-    padding-top: 5px;
-    margin-bottom: -1px;
-    background-color: rgb( 71, 135, 171 );
-  box-shadow: 1px 1px 0px 0px rgb( 0, 0, 0 );
+.champ_video{
+    margin-top: -15px;
 }
 .etape {
-background-color: rgb( 187, 187, 187 );
-position: relative;
-left: 517px;
-bottom: 32px;
-width: 30px;
-height: 24px;
-display: inline-block;
-font-size: 12px;
-text-align: center;
-line-height: 24px;
+    background-color: rgb( 187, 187, 187 );
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    line-height: 24px;
 }
+.photo{
+    margin-right: 15px;
+}
+.add{
+right: 0px;
+bottom: 17px;
+position: absolute;
+}
+.boxeur_list{
+    width:202px;
+    height:128px;
+    font-size: 12px;
+    font-family: "AvenirNextLTPro-Regular";
+
+}
+.boxeur_list p{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 22px;
+    width: 117px;
+}
+.boxeur{
+    width:163px;
+    height: 37px;
+    background: #f7f7f7;
+    display: block;
+    line-height: 37px;
+    color:#7a7979;
+    padding-left: 16px;
+    margin-bottom: 8px;
+}
+
+.mention_legales{
+    font-size: .4em;
+    color:white;
+    height: 36px;
+    width: 250px;
+    display: inline-block;
+    position: absolute;
+    bottom: 15px;
+    left: 175px;
+}
+.mention_legales a{
+    color:#477690;
+    text-decoration: none;
+}
+/* ==========================================================================
+    POP UP AJOUT CLUB
+   ========================================================================== */
+   .add_club{
+    width: 550px;
+    height: 389px;
+    background-color: #171717;
+    border-bottom: 12px solid #4787ab;
+    position: relative;
+    margin:0 auto;
+}
+
+    fieldset{
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 1px;
+    padding-bottom: 13px;
+    border: none;
+    }
+    .ajouter {
+        color:#4787ab;
+        font-size: 18px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    margin-left: 30px;
+    font-family: "AvenirNextLTPro-Regular";
+    }
+    .champ2{
+    display: inline-block;
+    margin-right: 40px;
+    position: relative;
+    }
+    .close{
+        position: absolute;
+        top:6px;
+        right: 6px;
+        display: inline-block;
+        cursor:pointer;
+    }
+    .upload{
+        margin-right: 41px;
+        margin-top:5px;
+    }
+    fieldset p:not(.completer){
+    color:#7a7979;
+    font-size:14px;
+    font-family: 'AvenirNextLTPro-Regular', sans-serif;
+    }
+    .add_button{
+    position: absolute;
+    right: 60px;
+    bottom:40px;
+    width: 95px;
+    height: 32px;
+    text-transform: uppercase;
+    color:white;
+    border:none;
+    background-color: rgb( 71, 135, 171 );
+    box-shadow: 1px 1px 0px 0px rgb( 0, 0, 0 );
+    display: inline-block;
+    }
 /* ==========================================================================
     PAGE 404
    ========================================================================== */

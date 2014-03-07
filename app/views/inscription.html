@@ -1,7 +1,11 @@
 <?php require('header.html');?>
     <body class="inscription">
-	<img src="images/logotypo.png" class="logo_inscr"/>
+	<img src="public/images/logotypo.png" class="logo_inscr"/>
+
 <form method="post" action="envoieformSportif" class="form_inscr">
+
+							<!--ETAPE 1 -->
+<!--
 	<fieldset> <legend>BIENVENUE</legend>
 		   <div class="legend_subtitles">
 			<p> Pour créer votre compte , merci de remplir les informations ci-dessous</p>
@@ -21,22 +25,22 @@
 			<input type="mail" name="email_sportif" required/>
 		</div>
 		<div class="champ">
-			<label for="password">Confirmer</label>
-			<input type="text" name="password_sportif" required/>
+			<label for="confirm_email">Confirmer</label>
+			<input type="mail" name="confirm_email" required/>
 		</div>
 		<div class="champ">
 			<label for="password">Mot de passe</label>
-			<input type="text" name="password_sportif" required/>
+			<input type="password" name="password_sportif" required/>
 		</div>
 		<div class="champ">
-			<label for="password">Confirmer </label>
-			<input type="text" name="password_sportif" required/>
+			<label for="confirmer">Confirmer </label>
+			<input type="password" name="confirm_password_sportif" required/>
 		</div>
 		<div class="champ sexe_input">
 			<label for="sexe">Sexe</label>
-			<label for="masculin" class="sexe">Homme</label>
+			<label for="masculin" class="radio_option">Homme</label>
 				<input type="radio" name="sexe_sportif" value="1" checked>
-			<label for="feminin" class="sexe">Femme</label>
+			<label for="feminin" class="radio_option">Femme</label>
 				<input type="radio" name="sexe_sportif" value="0">
 		</div>
 		<div class="champ">
@@ -49,18 +53,271 @@
 	     </div>
 	     <div class="champ">
 			<label for="classe">Statut</label>
-			<select name="classe_sportif">
+			<select name="statut" class="select_custom">
 				<option>Combattant</option>
 				<option>Entraineur</option>
 				<option>Manager</option>
 			</select>
 		</div>
-		<input class="submit" type="submit" name="envoi" value="Continuer">
+		<input class="valid" type="valid" name="envoi" value="Continuer">
 	</fieldset>
 	<div class="etape"> 1/2</div>
+-->
+								<!--ETAPE 2 BOXEUR -->
+<!--
+<fieldset> <legend>BIENVENUE</legend>
+		   <div class="legend_subtitles">
+			<p> Pour créer votre fiche Boxeur, veuillez compléter ces informations.</p>
+			<div class="triangle topleft"></div>
+			<div class="triangle topright"></div>
+		   </div>
+	     <div class="champ">
+			<label for="sport">Sport</label>
+			<select name="sport" class="select_custom">
+				<option>Full contact</option>
+				<option>Boxe Anglaise</option>
+				<option>Judo</option>
+				<option>K1</option>
+				<option>MMA</option>
+				<option>Taekwondo</option>
+			</select>
+		</div>
+	    <div class="champ">
+			<label for="classe">Classe</label>
+			<select name="classe_sportif" class="select_custom">
+				<option>Professionnel</option>
+				<option>Semi-professionnel</option>
+				<option>Amateur</option>
+				<option>Aucune</option>
+			</select>
+		</div>
+		<div class="champ">
+		 	<label for="nom">Poids</label>
+			<input type="text" name="nom_sportif" required/>
+		</div>
+		<div class="champ">
+		 	<label for="prenom">Taille</label>
+			<input type="text" name="prenom_sportif" required/>
+		</div>
+		<div class="champ">
+			<label for="email">Club</label>
+			<input type="mail" name="email_sportif" required/>
+			<img src="public/images/+.png" class="add"/>
+		</div>
+		<div class="champ">
+			<label for="password">Palmares</label>
+			<input type="text" name="password_sportif" required/>
+			<img src="public/images/+.png" class="add"/>
+		</div>
+		<div class="champ sexe_input">
+			<label for="Lateralite">Lateralite</label>
+			<label for="droitier" class="radio_option">Droitier</label>
+				<input type="radio" name="sexe_sportif" value="1" checked>
+			<label for="gaucher" class="radio_option">Gaucher</label>
+				<input type="radio" name="sexe_sportif" value="0">
+		</div>
+	    <div class="champ">
+			<label for="resultats">Resultats</label>
+			<select name="victoire" class="select_custom">
+				<option>1V</option>
+				<option>2V</option>
+				<option>3V</option>
+				<option>4V</option>
+			</select>
+			<select name="nul" class="select_custom">
+				<option>1N</option>
+				<option>2N</option>
+				<option>3N</option>
+				<option>4N</option>
+			</select>
+			<select name="defaite" class="select_custom">
+				<option>1D</option>
+				<option>2D</option>
+				<option>3D</option>
+				<option>4D</option>
+			</select>
+		</div>
+		<div class="champ">
+			<label for="photo">Mes photos</label>
+			<img src="public/images/boxeur_miniature.png" class="photo"/>
+			<img src="public/images/boxeur_miniature.png" class="photo"/>
+			<img src="public/images/boxeur_miniature.png" class="photo"/>
+
+		</div>
+		<div class="champ">
+			<label for="video">Mes videos</label>
+			<input type="text" name="video" required/>
+			<img src="public/images/+.png" class="add"/>		
+		</div>
+
+		<input class="valid" type="submit" name="envoi" value="INSCRIPTION">
+		<div class="mention_legales"> En cliquant sur continuer, vous acceptez nos <a href="#">Conditions</a> et indiquez que vous avez lu notre <a href="#">Politique d’utilisation des données </a>, y compris notre <a href="#">Utilisation des cookies</a>. </div>
+	</fieldset>
+	<div class="etape"> 2/2</div>
+-->
+								<!-- Etape 2 Entraineur -->
+
+<fieldset> <legend>BIENVENUE</legend>
+		   <div class="legend_subtitles">
+			<p class="completer"> Pour créer votre fiche Entraineur, veuillez compléter ces informations.</p>
+			<div class="triangle topleft"></div>
+			<div class="triangle topright"></div>
+		   </div>
+	     <div class="champ">
+			<label for="sport">Sport</label>
+			<select name="sport" class="select_custom">
+				<option>Full contact</option>
+				<option>Boxe Anglaise</option>
+				<option>Judo</option>
+				<option>K1</option>
+				<option>MMA</option>
+				<option>Taekwondo</option>
+			</select>
+		</div>
+	    <div class="champ">
+			<label for="classe">Diplôme</label>
+			<select name="diplome" class="select_custom">
+				<option>Instructeur féderal</option>
+				<option>Prévôt Fédéral</option>
+				<option>Brevet d'etat</option>
+				<option>Aucun</option>
+			</select>
+		</div>
+		<div class="champ">
+			<label for="email">Club</label>
+			<input type="mail" name="email_sportif" required/>
+			<img src="public/images/+.png" class="add"/>
+		</div>
+		<div class="champ">
+			<label for="password">Palmares</label>
+			<input type="text" name="password_sportif" required/>
+			<img src="public/images/+.png" class="add"/>
+		</div>
+		<div class="champ">
+			<label for="photo">Mes photos</label>
+			<img src="public/images/entraineur_miniature.png" class="photo"/>
+			<img src="public/images/entraineur_miniature.png" class="photo"/>
+			<img src="public/images/entraineur_miniature.png" class="photo"/>
+			<img src="public/images/+.png" class="add"/>
+		</div>
+	    <div class="champ boxeur_list">
+			<label for="boxeurs">Mes boxeurs</label>
+			<div class="boxeur">
+				<p> NABIL BECHAREF </p>
+				<img src="public/images/nabil_miniature.png" class="min_boxeur"/>
+			</div>
+			<div class="boxeur">
+				<p> CYRIL VETTER </p>
+				<img src="public/images/nabil_miniature.png" class="min_boxeur"/>
+			</div>
+			<div class="boxeur">
+				<p> ROBIN AIT-EL-..</p>
+				<img src="public/images/nabil_miniature.png" class="min_boxeur"/>
+			</div>
+		</div>
+		<div class="champ champ_video">
+			<label for="video">Mes videos</label>
+			<input type="text" name="video" required/>
+			<img src="public/images/+.png" class="add"/>		
+		</div>
+
+		<input class="valid" type="submit" name="envoi" value="INSCRIPTION">
+		<div class="mention_legales"> En cliquant sur continuer, vous acceptez nos <a href="#">Conditions</a> et indiquez que vous avez lu notre <a href="#">Politique d’utilisation des données </a>, y compris notre <a href="#">Utilisation des cookies</a>. </div>
+	</fieldset>
+	<div class="etape"> 2/2</div>
+
+						<!-- Etape 2 MANAGER -->
+<!--
+<fieldset> <legend>BIENVENUE</legend>
+		   <div class="legend_subtitles">
+			<p> Pour créer votre fiche Manager, veuillez compléter ces informations.</p>
+			<div class="triangle topleft"></div>
+			<div class="triangle topright"></div>
+		   </div>
+	     <div class="champ">
+			<label for="evenements">EVENEMENTS</label>
+			<select name="evenements" class="select_custom">
+				<option>0 - 5 EVENEMENTS</option>
+				<option>5 - 10 EVENEMENTS</option>
+				<option>10 - 20 EVENEMENTS</option>
+				<option>20 - 40 EVENEMENTS</option>
+				<option>40 - 60 EVENEMENTS</option>
+				<option>+60 EVENEMENTS</option>
+			</select>
+		</div>
+	    <div class="champ">
+			<label for="experiences">Expériences</label>
+			<select name="experiences" class="select_custom">
+				<option>1 - 3 ans</option>
+				<option>3 - 6 ans</option>
+				<option>8 - 9 ans</option>
+				<option>+ 10 ans </option>
+			</select>
+		</div>
+		<div class="champ">
+			<label for="photo">Mes photos</label>
+			<img src="public/images/entraineur_miniature.png" class="photo"/>
+			<img src="public/images/entraineur_miniature.png" class="photo"/>
+			<img src="public/images/entraineur_miniature.png" class="photo"/>
+			<img src="public/images/+.png" class="add"/>	
+		</div>
+
+		<input class="valid" type="submit" name="envoi" value="INSCRIPTION">
+		<div class="mention_legales"> En cliquant sur continuer, vous acceptez nos <a href="#">Conditions</a> et indiquez que vous avez lu notre <a href="#">Politique d’utilisation des données </a>, y compris notre <a href="#">Utilisation des cookies</a>. </div>
+	</fieldset>
+	<div class="etape"> 2/2</div>
+-->
 </form>
 
+						<!-- ADD CLUBS -->
+<!--
+<div class="add_club">
+	<p class="ajouter"> AJOUTER UN NOUVEAU CLUB </p>
+	<img src="public/images/close_blue.png" 
+	class="close"/>
+	<img src="public/images/line.png"/>
+	<fieldset>
+	<p> Veuillez renseigner l’adresse mail et le mot de passe qui vous serviront à administer cette page club. </p>
+	<div class="champ2">
+		<label for="email">E-Mail</label>
+		<input type="mail" name="email_sportif" required/>
+	</div>
+	<div class="champ2">
+		<label for="password_club">Mot de passe</label>
+		<input type="text" name="password_club" required/>
+	</div>
+	<div class="champ2">
+		<label for="nom_club">Nom du club</label>
+		<input type="text" name="nom_club" required/>
+		</div>
+	<div class="champ2">
+		<label for="annee">Annee de creation </label>
+		<input type="text" name="annee" required/>
+	</div>
+	<div class="champ2">
+		<label for="ville">Ville</label>
+		<input type="text" name="ville" required/>
+	</div>
+	<div class="champ2">
+		<label for="sport">Sport</label>
+			<select name="sport" class="select_custom">
+				<option>Full contact</option>
+				<option>Boxe Anglaise</option>
+				<option>Judo</option>
+				<option>K1</option>
+				<option>MMA</option>
+				<option>Taekwondo</option>
+			</select>
+	</div>
+	<label> Photos du club </label>
+	<img src="public/images/upload.png" class="upload"/>
+	<img src="public/images/upload.png" class="upload"/>
+	<img src="public/images/upload.png" class="upload"/>
+	<input class="add_button" type="submit" name="envoi" value="AJOUTER">
+</fieldset>
 
+-->
+</div>
 	<footer>
 	    <ul class="links">
 		<li><a href="#">cgu</a>&nbsp|&nbsp</li>
@@ -75,3 +332,4 @@
 
     </body>
 </html>
+w
