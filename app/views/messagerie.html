@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>La Bagarre</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="../../public/css/normalize.css">
+        <link rel="stylesheet" href="../../public/css/main.css">
+        <link rel="stylesheet" href="../../public/css/mfglabs_iconset.css">
+        <link rel="stylesheet" href="../../public/css/avenir-font-face.css">
+        <script src="../../public/js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+	<body>
+
+<div>
+	<form action="envoie">
+		<input type="datetime" name="date" id="date" value="<?php echo date('Y-m-d H:i:s') ?>"/>
+		<input type="text" name="destinataire" />
+		<textarea cols="50" rows="7" name="message"></textarea>
+		<input type="submit" value="envoyer"> 
+	</form>
+</div>
+
+        <footer>
+            <ul class="links">
+                <li><a href="#" data-content="cgu">cgu</a>&nbsp&nbsp|&nbsp</li>
+                <li><a href="#" data-content="contact">contact</a>&nbsp&nbsp|&nbsp</li>
+                <li><a href="#" data-content="who">qui sommes nous?</a></li>
+            </ul>
+            <ul class="social">
+                <li><a href=""><i class="icon-facebook"></i></a></li>
+                <li><a href=""><i class="icon-twitter"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../../public/public/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="../../public/js/plugins.js"></script>
+        <script src="../../public/js/main.js"></script>
+    </body>
+</html>

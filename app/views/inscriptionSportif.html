@@ -48,17 +48,13 @@ Le header
 			<input type="number" name="taille_sportif" value="180" min="120" required/><br />
 		<label for="club">Club</label> : <br />
 			<?php
-			
-			mysql_connect("localhost", "root", "") or die("Impossible de se connecter : " . mysql_error());
-			mysql_select_db("php_labagarre") or die("Impossible de se connecter à la base de données : " . mysql_error());
-			$req = mysql_query("SELECT id_club, nom_club FROM clubs ORDER BY nom_club ASC") or die(" Erreur lors de la requête : " . mysql_error());
-				echo "<select name='club_sportif'>"; 
-				while ($result = mysql_fetch_array($req)) {
-					echo "<option value='$result[0]'>$result[1]</option>\n";
-				}
-				echo "</select>"; 
-			mysql_close();
-			
+			if(isset($clubs)):
+				echo "<select name='boxeurs_entraineur'>"; 
+    		foreach($sportifs as $sportif): 
+				echo "<option value='$sportif[0]'>$sportif[1] $sportif[2]</option>\n";
+			endforeach; 
+			echo "</select>"; 
+    		endif;
 			?><br />
 		<label for="palmares">Palmares</label> : <br />
 			<input type="text" name="palmares_sportif"><br />

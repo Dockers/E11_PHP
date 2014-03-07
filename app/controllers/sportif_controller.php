@@ -9,7 +9,7 @@ class sportif_controller extends controller{
     function inscriptionSportif($f3){
       echo View::instance()->render('inscriptionSportif.html');
       $f3->set('inscriptionSportif',$this->model->inscriptionSportif());
-      echo View::instance()->render('mainSportif.html');
+      echo View::instance()->render('home.html');
     }
 
     function searchSportifs($f3){

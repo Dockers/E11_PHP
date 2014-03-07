@@ -44,17 +44,13 @@ Le header
 			</select><br />
 		<label for="club">Club</label> : <br />
 			<?php
-			
-			mysql_connect("localhost", "root", "") or die("Impossible de se connecter : " . mysql_error());
-			mysql_select_db("php_labagarre") or die("Impossible de se connecter à la base de données : " . mysql_error());
-			$req = mysql_query("SELECT id_club, nom_club FROM clubs ORDER BY nom_club ASC") or die(" Erreur lors de la requête : " . mysql_error());
+			if(isset($clubs)):
 				echo "<select name='club_entraineur'>"; 
-				while ($result = mysql_fetch_array($req)) {
-					echo "<option value='$result[0]'>$result[1]</option>\n";
-				}
-				echo "</select>"; 
-			mysql_close();
-			
+    		foreach($clubs as $club): 
+				echo "<option value='$club[0]'>$club[1]</option>\n";
+			endforeach; 
+			echo "</select>"; 
+    		endif;
 			?><br />
 		<label for="palmares">Palmares</label> : <br />
 			<input type="text" name="palmares_entraineur"><br />
@@ -64,17 +60,13 @@ Le header
 			<input type="file" name="videos_entraineur"><br />
 		<label for="sportifs">Sportifs</label> : <br />
 			<?php
-			
-			mysql_connect("localhost", "root", "") or die("Impossible de se connecter : " . mysql_error());
-			mysql_select_db("php_labagarre") or die("Impossible de se connecter à la base de données : " . mysql_error());
-			$req = mysql_query("SELECT id_sportif, nom_sportif FROM sportifs ORDER BY nom_sportif ASC") or die(" Erreur lors de la requête : " . mysql_error());
+			if(isset($clubs)):
 				echo "<select name='boxeurs_entraineur'>"; 
-				while ($result = mysql_fetch_array($req)) {
-					echo "<option value='$result[0]'>$result[1]</option>\n";
-				}
-				echo "</select>"; 
-			mysql_close();
-			
+    		foreach($sportifs as $sportif): 
+				echo "<option value='$sportif[0]'>$sportif[1] $sportif[2]</option>\n";
+			endforeach; 
+			echo "</select>"; 
+    		endif;
 			?><br />
 	</fieldset>
 	<input type="submit" name="envoi" value="Envoyer">
