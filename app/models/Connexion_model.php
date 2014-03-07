@@ -8,7 +8,11 @@ function __construct(){
 }
 
 public function signin($params){
-    return $this->getMapper('sportifs')->load('email_sportif="'.$params['email'].'"');
+    return $this->getMapper('sportifs')->load('email_sportif="'.$params['email'].'" && password_sportif="'.$params['password'].'"');
+}
+
+public function visiteur(){
+    return $this->getMapper('sportifs')->load('nom_sportif="visiteur"');
 }
 
 public function inscription($params){
