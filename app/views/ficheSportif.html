@@ -47,26 +47,25 @@
             <section id="preview">
                 <div class="wrap">
                     <div class="img-wrap">
-                        <div class="pro">semi-pro</div>
-                        <img src="public/images/profile-pic.png" class="profil" alt="{name}">
+                        <div class="pro"><?php echo $sportif->classe_sportif; ?></div>
+                        <img src="<?php echo $sportif->images_sportif; ?>" class="profil" alt="{name}">
                         <a href="#" class="thumb" ><img src="public/images/thumb1.jpg" alt="click me"></a>
                         <a href="#" class="thumb" ><img src="public/images/thumb2.jpg" alt="click me"></a>
                         <a href="#" class="thumb" ><img src="public/images/thumb3.jpg" alt="click me"></a>
                     </div>
 
                     <div class="infos">
-                        <h2>Kimbo Slice</h2><span class="radio available"></span>
-                        <p class="club">POWER BOXING CLUB de Vanve</p>
-                        <h4 class="palmares">38 V - 12 N - 6 D </h4>
+                        <h2><?php echo $sportif->prenom_sportif, $sportif->nom_sportif ?></h2><span class="radio available"></span>
+                        <p class="club"><?php echo $sportif->club_sportif; ?></p>
+                        <h4 class="palmares"><?php echo $sportif->victoires_sportif; ?> V - <?php echo $sportif->matchsnuls_sportif; ?> N - <?php echo $sportif->defaites_sportif; ?> D </h4>
                         <p class="label">sports</p>
-                        <p>boxe française, full contact</p>
+                        <p><?php echo $sportif->sport_sportif; ?></p>
                         <p class="label">mensurations</p>
-                        <p>97 kg - 1,72m</p>
+                        <p><?php echo $sportif->poid_sportif; ?> kg - <?php echo $sportif->taille_sportif; ?>m</p>
                         <p class="label">ville</p>
-                        <p>Bagnolet(93) - Île de France</p>
+                        <p><?php echo $sportif->codepostal_sportif; ?></p>
                         <p class="label">palmares</p>
-                        <p>CHAMPION  DU MONDE 2002</p>
-                        <p>CHAMPION DU MONDE ISKKA</p>
+                        <p><?php echo $sportif->palmares_sportif; ?></p>
                     </div>
                     <div class="link-wrap">
                         <a href="messagerie" class="btn">envoyer un message &nbsp&nbsp&nbsp<i class="icon-mail"></i></a>

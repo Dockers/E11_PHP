@@ -258,7 +258,7 @@ div#content {
             margin-left: -25px;
             margin-top: -16px;
         }
-    section#sidebar { position: absolute; z-index: 99; display: inline-block; width: 33.3%; left: -33.3%; height: 100%; background-color: #171717;
+    section#sidebar { position: absolute; top: 0; z-index: 99; display: inline-block; width: 33.3%; left: -33.3%; height: 100%; background-color: #171717;
         box-sizing: border-box; -moz-box-sizing: border-box; padding-left: 50px; padding-right: 50px;}
         #sidebar h4 {font-family: 'AvenirNextLTPro-Regular', sans-serif; font-size: .875em; color: #ababab; text-transform: uppercase;}
         #sidebar h4 span {opacity: .2;}
