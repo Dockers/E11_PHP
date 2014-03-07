@@ -97,12 +97,21 @@ a.logo, img.logo {
     margin-left: -55px;
 }
 .logo_big{
+<<<<<<< HEAD
     height: 90px;
     width: 250px;
     padding-bottom: 50px;
     display: block;
     margin: 0 auto;
     margin-top: 60px;
+=======
+height:93px;
+width:249px;
+padding-bottom: 13px;
+display: block;
+margin:0 auto;
+margin-top: 155px;
+>>>>>>> FETCH_HEAD
 }
 
 header.home a.logo {
@@ -519,18 +528,17 @@ footer {
 }
 form#connexionBox {
     display:block;
-    width: 290px;
+    width: 273px;
     height: 155px;
     top: 0;left: 0;right: 0;bottom: 0;
     margin: auto;
-    font-size: .85em;
 }
     form#connexionBox input {
-        width:270px;
-        height: 50px;
+        width:272px;
+        height: 49px;
         display: block;
         color:#aaa;
-        padding: 0 10px;
+        padding:  0 10px;
         font-family: "AvenirNextLTPro-Regular";
         outline: none;
     }
@@ -546,20 +554,18 @@ form#connexionBox {
     }
     form#connexionBox input:not(.submit):focus{
        background:#f4f1f1;
-       color: #333;
     }
     form#connexionBox .submit{
-        margin-top: 0;
+        margin-top: 1.4%;
         background: #529ecc;
         color:white;
         font-family: 'AvenirNextLTPro-Bold';
-        font-size: 1.2em;
-        line-height: 1.2em;
-        letter-spacing: 1px;
+        font-size: 1em;
         padding:  0 10px;
-        width: 290px;
+        width: 292px;
         box-shadow: 
-        vertical-align: top;
+        line-height: 100%;
+        vertical-align: middle;
         text-align: center;
         cursor: pointer;
         transition: background 0.1s ease-in-out;
@@ -585,71 +591,54 @@ form#connexionBox {
     form#connexionBox .submit:active {
         box-shadow: 0px 1px 0px 0px #417ea3;
     }
-    .barre{
-        position:relative;
-        top:12px;
-        left:2px;
-    }
+
     .inscriptionLink {
         text-decoration:underline;
         color:white;
         margin-top: 2.4%;
         text-align: center;
     }
-.info-wrap {
-    position: relative;
-    margin:0 auto;
-    margin-top: 50px;
-    display: block;
-    width:270px;
-    height: 150px;
-}
-.info_pop{
-    margin:0 auto;
-    display: block;
-    width:270px;
-    height: 150px;
-    background: rgba(0,0,0,.6);
-    border-radius: 2px;
-    padding: 10px;   
-    position: absolute;
-    left: 50%;
-    margin-left: -145px;
-    display: none;
-}
-    .info_pop img {
+     .info_pop{
+        margin-top: 42px;
+        margin:0 auto;
+        display: block;
+        width:251px;
+        height: 147px;
+        background: rgba(23,23,23,0.86);
+        padding:5px 19px 5px 19px;
+        position: relative;
+        left: 10px;
+        margin-bottom: 66px;
+    }
+    .info_pop img{
         display: block;
         margin: 0 auto;
-        margin-bottom: 40px;
     }
-    .info-wrap i {
-        position: absolute; cursor: pointer;
-        left: 50%; margin-left: -0.5em; z-index: 99;
-        top: 10px; font-size: 1.2em; color: white; 
+    .barre{
+        position:relative;
+        top:12px;
+        left:2px;
     }
-    .info_pop a {display:block;text-decoration: none; padding: 0 10px;}
-    .info_pop p{
-        font-size: .75em;
+     .info_pop p{
+        font-size: 12px;
         color:#bababa;
         text-align: center;
         font-family: 'AvenirNextLTPro-Regular';
     }
     .info_pop button {
-        background-color: rgb( 82, 158, 204 );
-        box-shadow: 0.5px 0.866px 1px 0px rgb( 0, 0, 0 );
-        font-size: .75em;
-        line-height: 1em;
-        letter-spacing: 1px;
-        height: auto;
-        padding: 10px;
-        outline: none;
-        border:none;
-        color:white;
-        text-transform: uppercase;
-        margin:0 auto;
-        font-family: 'AvenirNextLTPro-Bold';
-        display: block;
-        margin-bottom: 8px;
+         background-color: rgb( 82, 158, 204 );
+          box-shadow: 0.5px 0.866px 1px 0px rgb( 0, 0, 0 );
+          width: 103px;
+          height: 22px;
+          font-size: 12px;
+          outline: none;
+          border:none;
+          color:white;
+          text-transform: uppercase;
+          margin:0 auto;
+          font-family: 'AvenirNextLTPro-Bold';
+          display: block;
+          margin-bottom: 8px;
     }
 /* ==========================================================================
     PAGE INSCRIPTION

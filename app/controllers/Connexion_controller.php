@@ -4,6 +4,7 @@ class Connexion_controller extends controller{
     
   public function __construct(){
     parent::__construct();
+    $this->tpl=array('sync'=>'login.html');
   }
 
   public function signin($f3){
@@ -43,8 +44,37 @@ class Connexion_controller extends controller{
   }
 
   public function visiteur($f3){
-    $auth=$this->model->visiteur();
-    if(!$auth){
+        $auth=$this->model->visiteur();
+        if(!$auth){
+          $f3->set('error','erreur');
+          $this->tpl['sync']='login.html';
+        }else{
+          $user=array(
+            'id'=>$auth->id_sportif,
+            'nom'=>$auth->nom_sportif,
+            'prenom'=>$auth->prenom_sportif
+          );
+          $f3->set('SESSION',$user);
+          $f3->reroute('/');
+        }
+     
+
+   // $f3->set('test','true');
+    //$this->tpl['sync']='login.html';
+    // switch($f3->get('VERB')){
+    //   case 'GET':
+    //     $this->tpl['sync']='login.html';
+    //     break;
+    //   case 'POST':
+    // $auth=$this->model->visiteur();
+    // $user=array(
+    //         'id'=>$auth->id_sportif,
+    //         'nom'=>$auth->nom_sportif,
+    //         'prenom'=>$auth->prenom_sportif
+    //       );
+    // $f3->set('SESSION',$user);
+    // $this->tpl['sync']='inscription.html';
+    /*if(!$auth){
           $f3->set('error',$f3->get('loginError'));
           $this->tpl['sync']='inscription.html';
     }else{
@@ -55,7 +85,7 @@ class Connexion_controller extends controller{
           );
     $f3->set('SESSION',$user);
     $f3->reroute('/');
-    }
+    }*/
   }
 
 }
